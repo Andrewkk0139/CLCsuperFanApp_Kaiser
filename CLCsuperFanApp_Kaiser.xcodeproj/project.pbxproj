@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BCC30962B98C3B900E9A4FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC30952B98C3B900E9A4FB /* AppDelegate.swift */; };
+		3BCC30982B98C3B900E9A4FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC30972B98C3B900E9A4FB /* SceneDelegate.swift */; };
+		3BCC309A2B98C3B900E9A4FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC30992B98C3B900E9A4FB /* ViewController.swift */; };
+		3BCC309D2B98C3B900E9A4FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BCC309B2B98C3B900E9A4FB /* Main.storyboard */; };
+		3BCC309F2B98C3BA00E9A4FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCC309E2B98C3BA00E9A4FB /* Assets.xcassets */; };
+		3BCC30A22B98C3BA00E9A4FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BCC30A02B98C3BA00E9A4FB /* LaunchScreen.storyboard */; };
+		3BCC30AD2B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC30AC2B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests.swift */; };
+		3BCC30B72B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC30B62B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests.swift */; };
+		3BCC30B92B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC30B82B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3BCC30A92B98C3BB00E9A4FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BCC308A2B98C3B900E9A4FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BCC30912B98C3B900E9A4FB;
+			remoteInfo = CLCsuperFanApp_Kaiser;
+		};
+		3BCC30B32B98C3BB00E9A4FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BCC308A2B98C3B900E9A4FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BCC30912B98C3B900E9A4FB;
+			remoteInfo = CLCsuperFanApp_Kaiser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3BCC30922B98C3B900E9A4FB /* CLCsuperFanApp_Kaiser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLCsuperFanApp_Kaiser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BCC30952B98C3B900E9A4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3BCC30972B98C3B900E9A4FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3BCC30992B98C3B900E9A4FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3BCC309C2B98C3B900E9A4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BCC309E2B98C3BA00E9A4FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BCC30A12B98C3BA00E9A4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BCC30A32B98C3BA00E9A4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BCC30A82B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLCsuperFanApp_KaiserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BCC30AC2B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCsuperFanApp_KaiserTests.swift; sourceTree = "<group>"; };
+		3BCC30B22B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLCsuperFanApp_KaiserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BCC30B62B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCsuperFanApp_KaiserUITests.swift; sourceTree = "<group>"; };
+		3BCC30B82B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCsuperFanApp_KaiserUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BCC308F2B98C3B900E9A4FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCC30A52B98C3BB00E9A4FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCC30AF2B98C3BB00E9A4FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BCC30892B98C3B900E9A4FB = {
+			isa = PBXGroup;
+			children = (
+				3BCC30942B98C3B900E9A4FB /* CLCsuperFanApp_Kaiser */,
+				3BCC30AB2B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests */,
+				3BCC30B52B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests */,
+				3BCC30932B98C3B900E9A4FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3BCC30932B98C3B900E9A4FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BCC30922B98C3B900E9A4FB /* CLCsuperFanApp_Kaiser.app */,
+				3BCC30A82B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests.xctest */,
+				3BCC30B22B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BCC30942B98C3B900E9A4FB /* CLCsuperFanApp_Kaiser */ = {
+			isa = PBXGroup;
+			children = (
+				3BCC30952B98C3B900E9A4FB /* AppDelegate.swift */,
+				3BCC30972B98C3B900E9A4FB /* SceneDelegate.swift */,
+				3BCC30992B98C3B900E9A4FB /* ViewController.swift */,
+				3BCC309B2B98C3B900E9A4FB /* Main.storyboard */,
+				3BCC309E2B98C3BA00E9A4FB /* Assets.xcassets */,
+				3BCC30A02B98C3BA00E9A4FB /* LaunchScreen.storyboard */,
+				3BCC30A32B98C3BA00E9A4FB /* Info.plist */,
+			);
+			path = CLCsuperFanApp_Kaiser;
+			sourceTree = "<group>";
+		};
+		3BCC30AB2B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests */ = {
+			isa = PBXGroup;
+			children = (
+				3BCC30AC2B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests.swift */,
+			);
+			path = CLCsuperFanApp_KaiserTests;
+			sourceTree = "<group>";
+		};
+		3BCC30B52B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3BCC30B62B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests.swift */,
+				3BCC30B82B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITestsLaunchTests.swift */,
+			);
+			path = CLCsuperFanApp_KaiserUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BCC30912B98C3B900E9A4FB /* CLCsuperFanApp_Kaiser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BCC30BC2B98C3BB00E9A4FB /* Build configuration list for PBXNativeTarget "CLCsuperFanApp_Kaiser" */;
+			buildPhases = (
+				3BCC308E2B98C3B900E9A4FB /* Sources */,
+				3BCC308F2B98C3B900E9A4FB /* Frameworks */,
+				3BCC30902B98C3B900E9A4FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CLCsuperFanApp_Kaiser;
+			productName = CLCsuperFanApp_Kaiser;
+			productReference = 3BCC30922B98C3B900E9A4FB /* CLCsuperFanApp_Kaiser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3BCC30A72B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BCC30BF2B98C3BB00E9A4FB /* Build configuration list for PBXNativeTarget "CLCsuperFanApp_KaiserTests" */;
+			buildPhases = (
+				3BCC30A42B98C3BB00E9A4FB /* Sources */,
+				3BCC30A52B98C3BB00E9A4FB /* Frameworks */,
+				3BCC30A62B98C3BB00E9A4FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BCC30AA2B98C3BB00E9A4FB /* PBXTargetDependency */,
+			);
+			name = CLCsuperFanApp_KaiserTests;
+			productName = CLCsuperFanApp_KaiserTests;
+			productReference = 3BCC30A82B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3BCC30B12B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BCC30C22B98C3BB00E9A4FB /* Build configuration list for PBXNativeTarget "CLCsuperFanApp_KaiserUITests" */;
+			buildPhases = (
+				3BCC30AE2B98C3BB00E9A4FB /* Sources */,
+				3BCC30AF2B98C3BB00E9A4FB /* Frameworks */,
+				3BCC30B02B98C3BB00E9A4FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BCC30B42B98C3BB00E9A4FB /* PBXTargetDependency */,
+			);
+			name = CLCsuperFanApp_KaiserUITests;
+			productName = CLCsuperFanApp_KaiserUITests;
+			productReference = 3BCC30B22B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BCC308A2B98C3B900E9A4FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					3BCC30912B98C3B900E9A4FB = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					3BCC30A72B98C3BB00E9A4FB = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 3BCC30912B98C3B900E9A4FB;
+					};
+					3BCC30B12B98C3BB00E9A4FB = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 3BCC30912B98C3B900E9A4FB;
+					};
+				};
+			};
+			buildConfigurationList = 3BCC308D2B98C3B900E9A4FB /* Build configuration list for PBXProject "CLCsuperFanApp_Kaiser" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BCC30892B98C3B900E9A4FB;
+			productRefGroup = 3BCC30932B98C3B900E9A4FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BCC30912B98C3B900E9A4FB /* CLCsuperFanApp_Kaiser */,
+				3BCC30A72B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests */,
+				3BCC30B12B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BCC30902B98C3B900E9A4FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BCC30A22B98C3BA00E9A4FB /* LaunchScreen.storyboard in Resources */,
+				3BCC309F2B98C3BA00E9A4FB /* Assets.xcassets in Resources */,
+				3BCC309D2B98C3B900E9A4FB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCC30A62B98C3BB00E9A4FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCC30B02B98C3BB00E9A4FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BCC308E2B98C3B900E9A4FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BCC309A2B98C3B900E9A4FB /* ViewController.swift in Sources */,
+				3BCC30962B98C3B900E9A4FB /* AppDelegate.swift in Sources */,
+				3BCC30982B98C3B900E9A4FB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCC30A42B98C3BB00E9A4FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BCC30AD2B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCC30AE2B98C3BB00E9A4FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BCC30B92B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITestsLaunchTests.swift in Sources */,
+				3BCC30B72B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3BCC30AA2B98C3BB00E9A4FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BCC30912B98C3B900E9A4FB /* CLCsuperFanApp_Kaiser */;
+			targetProxy = 3BCC30A92B98C3BB00E9A4FB /* PBXContainerItemProxy */;
+		};
+		3BCC30B42B98C3BB00E9A4FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BCC30912B98C3B900E9A4FB /* CLCsuperFanApp_Kaiser */;
+			targetProxy = 3BCC30B32B98C3BB00E9A4FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3BCC309B2B98C3B900E9A4FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BCC309C2B98C3B900E9A4FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BCC30A02B98C3BA00E9A4FB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BCC30A12B98C3BA00E9A4FB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3BCC30BA2B98C3BB00E9A4FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3BCC30BB2B98C3BB00E9A4FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BCC30BD2B98C3BB00E9A4FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A67NH8S3S6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CLCsuperFanApp_Kaiser/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "clc.CLCsuperFanApp-Kaiser";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BCC30BE2B98C3BB00E9A4FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A67NH8S3S6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CLCsuperFanApp_Kaiser/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "clc.CLCsuperFanApp-Kaiser";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3BCC30C02B98C3BB00E9A4FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A67NH8S3S6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "clc.CLCsuperFanApp-KaiserTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CLCsuperFanApp_Kaiser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CLCsuperFanApp_Kaiser";
+			};
+			name = Debug;
+		};
+		3BCC30C12B98C3BB00E9A4FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A67NH8S3S6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "clc.CLCsuperFanApp-KaiserTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CLCsuperFanApp_Kaiser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CLCsuperFanApp_Kaiser";
+			};
+			name = Release;
+		};
+		3BCC30C32B98C3BB00E9A4FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A67NH8S3S6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "clc.CLCsuperFanApp-KaiserUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CLCsuperFanApp_Kaiser;
+			};
+			name = Debug;
+		};
+		3BCC30C42B98C3BB00E9A4FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A67NH8S3S6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "clc.CLCsuperFanApp-KaiserUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CLCsuperFanApp_Kaiser;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BCC308D2B98C3B900E9A4FB /* Build configuration list for PBXProject "CLCsuperFanApp_Kaiser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BCC30BA2B98C3BB00E9A4FB /* Debug */,
+				3BCC30BB2B98C3BB00E9A4FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BCC30BC2B98C3BB00E9A4FB /* Build configuration list for PBXNativeTarget "CLCsuperFanApp_Kaiser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BCC30BD2B98C3BB00E9A4FB /* Debug */,
+				3BCC30BE2B98C3BB00E9A4FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BCC30BF2B98C3BB00E9A4FB /* Build configuration list for PBXNativeTarget "CLCsuperFanApp_KaiserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BCC30C02B98C3BB00E9A4FB /* Debug */,
+				3BCC30C12B98C3BB00E9A4FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BCC30C22B98C3BB00E9A4FB /* Build configuration list for PBXNativeTarget "CLCsuperFanApp_KaiserUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BCC30C32B98C3BB00E9A4FB /* Debug */,
+				3BCC30C42B98C3BB00E9A4FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BCC308A2B98C3B900E9A4FB /* Project object */;
+}
