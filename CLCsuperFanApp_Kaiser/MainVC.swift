@@ -8,22 +8,27 @@
 import UIKit
 
 class MainVC: UIViewController {
-
+    @IBOutlet weak var usernameTextOutlet: UILabel!
+    @IBOutlet weak var pointsOutlet: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func upcomingAction(_ sender: Any) { 
+        performSegue(withIdentifier: "toUpcomingEvents", sender: self)
     }
-    */
+    @IBAction func leaderboardAction(_ sender: Any) { 
+        performSegue(withIdentifier: "toLeaderboard", sender: self)
+    }
+    @IBAction func redeemAction(_ sender: Any) {
+        performSegue(withIdentifier: "toRedeem", sender: self)
+    }
+    @IBAction func statsAction(_ sender: Any) { 
+        performSegue(withIdentifier: "toStats", sender: self)
+    }
+    
 
 }

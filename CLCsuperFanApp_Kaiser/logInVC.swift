@@ -6,24 +6,26 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseDatabase
 
 class logInVC: UIViewController {
 
+    @IBOutlet weak var usernameFieldOutlet: UITextField!
+    @IBOutlet weak var passwordFieldOutlet: UITextField!
+    @IBOutlet weak var invalidTextOutlet: UILabel!
+    
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        ref = Database.database().reference()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func loginAction(_ sender: Any) {
+        
     }
-    */
+    
 
 }
