@@ -15,6 +15,8 @@ class MainVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        usernameTextOutlet.text = AppData.user.username
+        pointsOutlet.text =  "Points: \(AppData.user.points)"
     }
     
     @IBAction func upcomingAction(_ sender: Any) { 

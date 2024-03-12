@@ -7,7 +7,9 @@
 
 import UIKit
 
-class RedeemVC: UIViewController {
+class RedeemVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    let imagePicker = UIImagePickerController()
 
     @IBOutlet weak var cameraOutlet: UIImageView!
     
@@ -15,6 +17,12 @@ class RedeemVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        // starting users camera
+        imagePicker.delegate = self
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = UIImagePickerController.SourceType.camera
+        }
+        present(imagePicker, animated: true)
     }
     
 

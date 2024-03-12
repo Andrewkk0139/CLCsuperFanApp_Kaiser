@@ -28,13 +28,13 @@ import FirebaseDatabase
      init(dict: [String:Any]){
          // Safely unwrapping values from dictionary
          if let a = dict["username:"] as? String{
-             username = a
+             username = a.lowercased()
          }
          else{
              username = "nill"
          }
          if let n = dict["password:"] as? String{
-             password = n
+             password = n.lowercased()
          } else {
              password = ""
          }

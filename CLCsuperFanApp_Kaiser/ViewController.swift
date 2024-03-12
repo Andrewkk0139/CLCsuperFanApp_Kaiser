@@ -11,7 +11,7 @@ import FirebaseDatabase
 
 struct AppData {
     static var user: Student!
-    static var masterUsers: [String:String] = [:]
+    static var masterUsers: [Student] = []
 }
 
 class ViewController: UIViewController {
@@ -25,7 +25,9 @@ class ViewController: UIViewController {
         
         // SETTING MASTER STU ARRAY
         ref.child("Users").observe(.childAdded, with: { (snapshot) in
-           
+            let dict = snapshot.value as! [String:Any]
+            let u = Student(dict: dict)
+            AppData.masterUsers.append(u)
         })
         
         // called after .childAdded
