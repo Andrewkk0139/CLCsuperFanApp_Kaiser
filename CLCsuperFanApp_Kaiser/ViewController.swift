@@ -33,8 +33,14 @@ class ViewController: UIViewController {
         // called after .childAdded
         ref.child("Users").observeSingleEvent(of: .value, with: { snapshot in
                 print("--inital load has completed and the last user was read--")
-                print(AppData.masterUsers.count)
-            })
+            AppData.masterUsers.sort(by: {$0.points > $1.points })
+            for i in 0..<AppData.masterUsers.count {
+                AppData.masterUsers[i].declareRank(i)
+                print("Username: \(AppData.masterUsers[i].username) Rank: #\(AppData.masterUsers[i].globalRank)")
+            }
+        })
+        // sorts the array in decending order based on points
+        
     }
     
     @IBAction func loginAction(_ sender: Any) {

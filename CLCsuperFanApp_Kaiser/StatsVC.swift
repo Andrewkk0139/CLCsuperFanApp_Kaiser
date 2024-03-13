@@ -16,6 +16,9 @@ class StatsVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        usernameOutlet.text = AppData.user.username
+        pointsOutlet.text = "\(AppData.user.points)"
+        rankOutlet.text = "#\(AppData.user.globalRank)"
     }
     
 

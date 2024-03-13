@@ -14,6 +14,7 @@ import FirebaseDatabase
     var password: String
     var points: Int
     var firebaseKey = ""
+    var globalRank = 0
      
     var ref = Database.database().reference()
 
@@ -51,5 +52,9 @@ import FirebaseDatabase
          let dict = ["username:":username,"password:":password,"points:":points] as [String:Any]
          // saves the dictionary to the child, Students2
          ref.child("Users").childByAutoId().setValue(dict)
+     }
+     
+     func declareRank(_ i: Int) {
+         globalRank = i + 1
      }
 }
