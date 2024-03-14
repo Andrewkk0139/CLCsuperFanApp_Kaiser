@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseDatabase
 
 class MainVC: UIViewController {
     @IBOutlet weak var usernameTextOutlet: UILabel!
     @IBOutlet weak var pointsOutlet: UILabel!
+    var ref: DatabaseReference!
+
     
     override func viewDidLoad() {
+        print("view loaded")
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -31,6 +36,8 @@ class MainVC: UIViewController {
     @IBAction func statsAction(_ sender: Any) { 
         performSegue(withIdentifier: "toStats", sender: self)
     }
+    @IBAction func codeAction(_ sender: Any) {
+        performSegue(withIdentifier: "toCode", sender: self)
+    }
     
-
 }
