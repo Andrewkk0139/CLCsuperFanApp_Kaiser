@@ -27,7 +27,10 @@ class logInVC: UIViewController {
     @IBAction func loginAction(_ sender: Any) {
         let tempUser = (usernameFieldOutlet.text ?? "nil").lowercased()
         let tempPass = (passwordFieldOutlet.text ?? "nil").lowercased()
-        
+        if (tempUser == "admin" && tempPass == "admin"){
+            performSegue(withIdentifier: "toAdmin", sender: self)
+            return
+        }
         for i in 0..<AppData.masterUsers.count {
             if tempUser == AppData.masterUsers[i].username && tempPass == AppData.masterUsers[i].password {
                 print("Successfully logged user in!")

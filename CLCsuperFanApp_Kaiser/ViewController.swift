@@ -42,6 +42,17 @@ class ViewController: UIViewController {
         })
         // sorts the array in decending order based on points
         
+        // SETTING UP MASTER CODE ARRAY
+        ref.child("Codes").observe(.childAdded, with: { (snapshot) in
+            let dict = snapshot.value as! [String:Any]
+            let c = AccessCode(dict: dict)
+            AppData.masterCodes.append(c)
+        })
+        
+        // called after .childAdded
+        ref.child("Codes").observeSingleEvent(of: .value, with: { snapshot in
+                print("--inital load has completed and the last user was read--")
+        })
     }
     
     @IBAction func loginAction(_ sender: Any) {

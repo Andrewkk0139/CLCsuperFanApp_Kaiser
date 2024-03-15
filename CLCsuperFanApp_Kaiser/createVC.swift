@@ -25,24 +25,25 @@ class createVC: UIViewController {
     }
     // Need to check for dupe accounts/ dupe username or passwords
     @IBAction func createAction(_ sender: Any) {
+        var check = AppData.masterUsers.count
         let newStud = Student(username: (usernameFieldOutlet.text!.lowercased()) , password: (passwordFieldOutlet.text!.lowercased()) , points: 0)
         for i in 0..<AppData.masterUsers.count {
-            if (newStud.username != AppData.masterUsers[i].username){
-                if (newStud.password != AppData.masterUsers[i].password) {
-                    // No dupe accounts found
-                    print("No dupes found, account made")
-                    newStud.saveToFirebase()
-                    AppData.user = newStud
-                    performSegue(withIdentifier: "createToMain", sender: self)
-                    return
+            if (newStud.username == AppData.masterUsers[i].username){
+                if (newStud.password == AppData.masterUsers[i].password) {
+                    check -= 1
                 }
+            }
+        }
+            if check == AppData.masterUsers.count {
+                // No dupe accounts found
+                print("No dupes found, account made")
+                newStud.saveToFirebase()
+                AppData.user = newStud
+                performSegue(withIdentifier: "createToMain", sender: self)
+                return
             } else {
                 invalidTextOutlet.isHidden = false
             }
-        }
-        
-        
-        
     }
     
 
