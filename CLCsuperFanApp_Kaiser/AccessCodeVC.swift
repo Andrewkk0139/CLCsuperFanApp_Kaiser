@@ -6,13 +6,44 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseDatabase
 
 class AccessCodeVC: UIViewController {
+    
+    @IBOutlet weak var codeFieldOutlet: UITextField!
+    @IBOutlet weak var codeRedOutlet: UILabel!
+    var ref: DatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ref = Database.database().reference()
         // Do any additional setup after loading the view.
+        codeRedOutlet.isHidden = true
+    }
+    
+    @IBAction func redeemAction(_ sender: Any) {
+        print(AppData.masterCodes)
+        let tempCode = codeFieldOutlet.text ?? "nil"
+        for i in 0..<AppData.masterCodes.count {
+            // checks to see if the code is valid
+            if AppData.masterCodes[i].code == tempCode {
+                for k in 0..<AppData.user.usedCodes.count {
+                    // code isn't used already by user
+                    if AppData.user.usedCodes[k] != tempCode{
+                        // checks to see if its went thru whole array
+                        if k == AppData.user.usedCodes.count - 1 {
+                            print("*BEFORE REDEEMED* Username:\(AppData.user.username) Points: \(AppData.user.points)")
+                            AppData.user.points += AppData.masterCodes[k].value
+                            codeRedOutlet.isHidden = false
+                            print("*AFTER REDEEMED* Username:\(AppData.user.username) Points: \(AppData.user.points)")
+                            AppData.user.usedCodes.append(tempCode)
+                            return
+                        }
+                    } else {print("code already redeemed")}
+                }
+            } else {print("code isn't valid")}
+        }
     }
     
 

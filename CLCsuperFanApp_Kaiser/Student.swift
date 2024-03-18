@@ -15,6 +15,7 @@ import FirebaseDatabase
     var points: Int
     var firebaseKey = ""
     var globalRank = 0
+    var usedCodes: [String] = []
      
     var ref = Database.database().reference()
 
@@ -44,12 +45,15 @@ import FirebaseDatabase
          } else {
              points = 0
          }
+         if let u = dict["usedCodes:"] as? [String]{
+             usedCodes = u
+         }
      }
      
      func saveToFirebase() {
          print("saveToFirebase")
          // in func makes a dictionary
-         let dict = ["username:":username,"password:":password,"points:":points] as [String:Any]
+         let dict = ["username:":username,"password:":password,"points:":points,"usedCodes:":usedCodes] as [String:Any]
          // saves the dictionary to the child, Students2
          ref.child("Users").childByAutoId().setValue(dict)
      }
