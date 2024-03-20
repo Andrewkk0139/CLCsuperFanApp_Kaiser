@@ -22,6 +22,10 @@ class MainVC: UIViewController {
         // Do any additional setup after loading the view.
         usernameTextOutlet.text = AppData.user.username
         pointsOutlet.text =  "Points: \(AppData.user.points)"
+        print("ALL VALID CODES BELOW:")
+        for i in 0..<AppData.masterCodes.count{
+            print(AppData.masterCodes[i].code)
+        }
     }
     
     @IBAction func upcomingAction(_ sender: Any) { 

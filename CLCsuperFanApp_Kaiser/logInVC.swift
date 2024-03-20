@@ -31,6 +31,7 @@ class logInVC: UIViewController {
             performSegue(withIdentifier: "toAdmin", sender: self)
             return
         }
+        
         for i in 0..<AppData.masterUsers.count {
             if tempUser == AppData.masterUsers[i].username && tempPass == AppData.masterUsers[i].password {
                 print("Successfully logged user in!")

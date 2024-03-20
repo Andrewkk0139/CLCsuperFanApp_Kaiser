@@ -25,6 +25,7 @@ import FirebaseDatabase
         self.password = password
         self.points = points
         firebaseKey = ref.child("Users").childByAutoId().key ?? "0"
+        usedCodes.append("nil")
     }
     
      init(dict: [String:Any]){
@@ -56,7 +57,9 @@ import FirebaseDatabase
          let dict = ["username:":username,"password:":password,"points:":points,"usedCodes:":usedCodes] as [String:Any]
          // saves the dictionary to the child, Students2
          ref.child("Users").childByAutoId().setValue(dict)
+
      }
+   
      
      func declareRank(_ i: Int) {
          globalRank = i + 1
