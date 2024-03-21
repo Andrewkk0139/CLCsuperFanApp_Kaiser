@@ -18,6 +18,7 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         print("view loaded")
         super.viewDidLoad()
+        print("Users firebase key: \(AppData.user.firebaseKey)")
 
         // Do any additional setup after loading the view.
         usernameTextOutlet.text = AppData.user.username
@@ -26,6 +27,7 @@ class MainVC: UIViewController {
         for i in 0..<AppData.masterCodes.count{
             print(AppData.masterCodes[i].code)
         }
+        
     }
     
     @IBAction func upcomingAction(_ sender: Any) { 

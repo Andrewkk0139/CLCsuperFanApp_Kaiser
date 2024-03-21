@@ -27,35 +27,50 @@ class AccessCodeVC: UIViewController {
     }
     
     @IBAction func redeemAction(_ sender: Any) {
-        print(AppData.masterCodes)
         codeRedOutlet.isHidden = true
         codeInvalidOutlet.isHidden = true
         codeAlrRedeemedOutlet.isHidden = true
         
         let tempCode = codeFieldOutlet.text ?? "nil"
         
+        
         for i in 0..<AppData.masterCodes.count {
             // checks to see if the code is valid
             if AppData.masterCodes[i].code == tempCode {
                 // if code is valid
+                let firebaseCode = AppData.masterCodes[i]
                 for k in 0..<AppData.user.usedCodes.count {
                     // code isn't used already by user
                     if AppData.user.usedCodes[k] != tempCode{
                         // checks to see if its went thru whole array
                         if k == AppData.user.usedCodes.count - 1 {
                             print("*BEFORE REDEEMED* Username:\(AppData.user.username) Points: \(AppData.user.points)")
-                            AppData.user.points += AppData.masterCodes[k].value
+                            AppData.user.points += firebaseCode.value
                             codeRedOutlet.isHidden = false
                             print("*AFTER REDEEMED* Username:\(AppData.user.username) Points: \(AppData.user.points)")
-                            // updating on FireBase with a hard coded firebase key
-                            ref.child("Users").child("-NtR8uXx2NTzjfVdkRNx").child("points:").setValue(AppData.user.points)
-                            //
+                            // updating on FireBase
+                            ref.child("Users").child("\(AppData.user.firebaseKey)").child("points:").setValue(AppData.user.points)
                             AppData.user.usedCodes.append(tempCode)
+                            // updating on FireBase
+                            ref.child("Users").child("\(AppData.user.firebaseKey)").child("usedCodes:").setValue(AppData.user.usedCodes)
+                            // updating leaderboard
+                            AppData.masterUsers.sort(by: {$0.points > $1.points})
+                            for i in 0..<AppData.masterUsers.count {
+                                AppData.masterUsers[i].declareRank(i)
+                            }
+                            // updating lifespan of code
+                                // updates masterCode
+                            AppData.masterCodes[i].life -= 1
+                                // updates on firebase
+                            ref.child("Codes").child("\(firebaseCode.firebaseKey)").child("life:").setValue(firebaseCode.life - 1)
+
                             return
                         }
-                    } else {codeAlrRedeemedOutlet.isHidden = false}
+                    } else {codeAlrRedeemedOutlet.isHidden = false 
+                        return}
                 }
-            } else {codeInvalidOutlet.isHidden = false}
+            } else {codeInvalidOutlet.isHidden = false 
+                return}
         }
     }
     

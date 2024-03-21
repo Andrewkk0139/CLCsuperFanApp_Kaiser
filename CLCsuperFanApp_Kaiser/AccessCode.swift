@@ -13,6 +13,7 @@ class AccessCode {
     var code: String
     var life: Int
     var value: Int
+    var firebaseKey = ""
     
     var ref = Database.database().reference()
 
@@ -21,6 +22,7 @@ class AccessCode {
         self.code = code
         self.life = life
         self.value = value
+        firebaseKey = ref.child("Users").childByAutoId().key ?? "0"
     }
     init(dict: [String:Any]){
         // Safely unwrapping values from dictionary

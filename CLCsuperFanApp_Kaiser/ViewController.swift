@@ -28,12 +28,14 @@ class ViewController: UIViewController {
         ref.child("Users").observe(.childAdded, with: { (snapshot) in
             let dict = snapshot.value as! [String:Any]
             let u = Student(dict: dict)
+            u.firebaseKey = snapshot.key
             AppData.masterUsers.append(u)
         })
         
         // called after .childAdded
         ref.child("Users").observeSingleEvent(of: .value, with: { snapshot in
                 print("--inital load has completed and the last user was read--")
+            // sorts
             AppData.masterUsers.sort(by: {$0.points > $1.points })
             for i in 0..<AppData.masterUsers.count {
                 AppData.masterUsers[i].declareRank(i)
@@ -46,6 +48,7 @@ class ViewController: UIViewController {
         ref.child("Codes").observe(.childAdded, with: { (snapshot) in
             let dict = snapshot.value as! [String:Any]
             let c = AccessCode(dict: dict)
+            c.firebaseKey = snapshot.key
             AppData.masterCodes.append(c)
         })
         
