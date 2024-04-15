@@ -108,6 +108,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BA2EB7E2BC9805900676F75 /* AccountVCs */ = {
+			isa = PBXGroup;
+			children = (
+				3B3E294F2B9B62C900D326AF /* createVC.swift */,
+				3B3E294D2B9B62AC00D326AF /* logInVC.swift */,
+				3B9E35172BA345E4008D4855 /* AdminConsole.swift */,
+			);
+			path = AccountVCs;
+			sourceTree = "<group>";
+		};
+		3BA2EB7F2BC9807300676F75 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3B3E295B2B9B63A500D326AF /* Student.swift */,
+				3B9E35152BA343E0008D4855 /* AccessCode.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3BA2EB802BC980AF00676F75 /* FourOptions */ = {
+			isa = PBXGroup;
+			children = (
+				3B3E29572B9B633100D326AF /* LeaderboardVC.swift */,
+				3B3E29592B9B633F00D326AF /* RedeemVC.swift */,
+				3B3E29552B9B631A00D326AF /* StatsVC.swift */,
+				3B3E29532B9B630A00D326AF /* UpcomingVC.swift */,
+			);
+			path = FourOptions;
+			sourceTree = "<group>";
+		};
 		3BCC30892B98C3B900E9A4FB = {
 			isa = PBXGroup;
 			children = (
@@ -133,19 +163,13 @@
 			children = (
 				3BCC30952B98C3B900E9A4FB /* AppDelegate.swift */,
 				3BCC30972B98C3B900E9A4FB /* SceneDelegate.swift */,
-				3B3E295B2B9B63A500D326AF /* Student.swift */,
-				3B9E35152BA343E0008D4855 /* AccessCode.swift */,
 				3BCC309B2B98C3B900E9A4FB /* Main.storyboard */,
+				3BA2EB7F2BC9807300676F75 /* Classes */,
+				3BA2EB7E2BC9805900676F75 /* AccountVCs */,
 				3BCC30992B98C3B900E9A4FB /* ViewController.swift */,
-				3B3E294F2B9B62C900D326AF /* createVC.swift */,
-				3B3E294D2B9B62AC00D326AF /* logInVC.swift */,
-				3B9E35172BA345E4008D4855 /* AdminConsole.swift */,
 				3B3E29512B9B62FA00D326AF /* MainVC.swift */,
-				3B3E29532B9B630A00D326AF /* UpcomingVC.swift */,
-				3B3E29572B9B633100D326AF /* LeaderboardVC.swift */,
-				3B3E29592B9B633F00D326AF /* RedeemVC.swift */,
 				3B9E35112BA342E7008D4855 /* AccessCodeVC.swift */,
-				3B3E29552B9B631A00D326AF /* StatsVC.swift */,
+				3BA2EB802BC980AF00676F75 /* FourOptions */,
 				3BCC309E2B98C3BA00E9A4FB /* Assets.xcassets */,
 				3BCC30A02B98C3BA00E9A4FB /* LaunchScreen.storyboard */,
 				3BA827422B9F54390037B0DF /* GoogleService-Info.plist */,
