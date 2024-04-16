@@ -13,7 +13,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var usernameTextOutlet: UILabel!
     @IBOutlet weak var pointsOutlet: UILabel!
     var ref: DatabaseReference!
-
+// setup for firebase
     
     override func viewDidLoad() {
         print("view loaded")
