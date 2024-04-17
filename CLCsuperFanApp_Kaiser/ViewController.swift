@@ -14,6 +14,9 @@ struct AppData {
     static var user: Student!
     static var masterUsers: [Student] = []
     static var masterCodes: [AccessCode] = []
+    var handle = Auth.auth().addStateDidChangeListener { Auth, User in
+        
+    }
 }
 
 class ViewController: UIViewController {
