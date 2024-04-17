@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseCore
 import FirebaseDatabase
+import FirebaseAuth
 
 struct AppData {
     static var user: Student!
@@ -66,6 +67,7 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "toCreate", sender: self)
 
     }
+    
     
 
 }

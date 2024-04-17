@@ -108,6 +108,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		143B781D2BD011C300CC4D67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3BA2EB7E2BC9805900676F75 /* AccountVCs */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +152,7 @@
 				3BCC30AB2B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests */,
 				3BCC30B52B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests */,
 				3BCC30932B98C3B900E9A4FB /* Products */,
+				143B781D2BD011C300CC4D67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
