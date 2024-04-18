@@ -8,11 +8,15 @@
 import UIKit
 import FirebaseCore
 import FirebaseDatabase
+import FirebaseAuth
 
 struct AppData {
     static var user: Student!
     static var masterUsers: [Student] = []
     static var masterCodes: [AccessCode] = []
+    var handle = Auth.auth().addStateDidChangeListener { Auth, User in
+        
+    }
 }
 
 class ViewController: UIViewController {
@@ -66,6 +70,7 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "toCreate", sender: self)
 
     }
+    
     
 
 }
