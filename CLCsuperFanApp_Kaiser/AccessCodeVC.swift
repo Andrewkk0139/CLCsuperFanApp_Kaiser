@@ -36,7 +36,7 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         
         
-       
+        
     }
     
     @IBAction func redeemAction(_ sender: Any) {
@@ -50,15 +50,15 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate {
             codeInvalidOutlet.isHidden = true
             codeAlrRedeemedOutlet.isHidden = true
             let tempCode = codeFieldOutlet.text ?? "nil"
-            var invalidBool = false
-            var alrRedBool = false
-            
+            var validBool = false
+            var alrRedBool = true
+            var foundUsed = false
             for i in 0..<AppData.masterCodes.count {
                 // checks to see if the code is valid
                 print(tempCode)
                 print(AppData.masterCodes[i].code)
                 if AppData.masterCodes[i].code == tempCode {
-                    invalidBool = true
+                    validBool = true
                     // if code is valid
                     print("code is valid")
                     let firebaseCode = AppData.masterCodes[i]
@@ -69,8 +69,8 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate {
                         if AppData.user.usedCodes[k] != tempCode{
                             // checks to see if its went thru whole array
                             print("value of K:\(k), value of count: \(AppData.user.usedCodes.count - 1)")
-                            if k == AppData.user.usedCodes.count - 1 {
-                                alrRedBool = true
+                            if k == AppData.user.usedCodes.count - 1 && !foundUsed{
+                                alrRedBool = false
                                 print("Code hasn't been used already")
                                 print("*BEFORE REDEEMED* Username:\(AppData.user.username) Points: \(AppData.user.points)")
                                 AppData.user.points += firebaseCode.value
@@ -93,40 +93,35 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate {
                                 ref.child("Codes").child("\(firebaseCode.firebaseKey)").child("life:").setValue(firebaseCode.life - 1)
                                 
                                 return
+                                
                             }
                         } else {
+                            foundUsed = true
                             //codeAlrRedeemedOutlet.isHidden = false
                             print("Code has been already redeemed")
                             //break
                         }
-                    } else {
-                        foundUsed = true
-                        //codeAlrRedeemedOutlet.isHidden = false
-                        print("Code has been already redeemed")
-                        //break
                     }
                 } else {
+                    validBool = true
                     //codeInvalidOutlet.isHidden = false
                     print("Code is invalid")
                     //break
                 }
             }
-            if !invalidBool {
+            if validBool {
                 codeInvalidOutlet.isHidden = false
                 codeAlrRedeemedOutlet.isHidden = true
             }
-            if !alrRedBool {
+            if alrRedBool {
                 codeAlrRedeemedOutlet.isHidden = false
                 codeInvalidOutlet.isHidden = true
             }
         }
-        
-       
-        }
-        
+        // end of func
+    }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         currentLocaiton = locations[0]
     }
-
-        
-    }
+    // end of class
+}
