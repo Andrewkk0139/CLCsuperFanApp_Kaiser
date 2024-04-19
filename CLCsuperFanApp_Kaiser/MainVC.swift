@@ -37,7 +37,7 @@ class MainVC: UIViewController {
         performSegue(withIdentifier: "toLeaderboard", sender: self)
     }
     @IBAction func redeemAction(_ sender: Any) {
-        performSegue(withIdentifier: "toRedeem", sender: self)
+        performSegue(withIdentifier: "toCode", sender: self)
     }
     @IBAction func statsAction(_ sender: Any) { 
         performSegue(withIdentifier: "toStats", sender: self)
