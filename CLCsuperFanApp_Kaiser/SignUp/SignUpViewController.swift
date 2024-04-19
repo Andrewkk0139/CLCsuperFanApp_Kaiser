@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class SignUpViewController: UIViewController {
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -36,6 +38,8 @@ class SignUpViewController: UIViewController {
         let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespaces)
         if isPasswordValid(password: cleanedPassword){
                 
+        }else{
+            return "Ensure your password is at least 8 characters, contains a special character and a number"
         }
         
         return nil
@@ -44,6 +48,23 @@ class SignUpViewController: UIViewController {
     @IBAction func signUpTapped(_ sender: Any) {
         
         //validate fields
+        let error =  validateFields()
+        
+        if error == nil{
+            Auth.auth().createUser(withEmail: "", password: "") { result, err in
+                //checks for errors
+                if let err = err{
+                    //There was an error creating the user
+                    print(err)
+                }else{
+                    //User was added successfully
+                    let db = Firestore.firestore()
+                    //db.collection("users").addDocument(data: )
+                }
+            }
+        }else{
+            print(error!)
+        }
         //create user
         //transition to the home screen
     }
