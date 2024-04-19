@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		143B78212BD0148300CC4D67 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143B78202BD0148300CC4D67 /* AuthenticationViewController.swift */; };
+		14095B722BD161DB00336E59 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14095B712BD161DB00336E59 /* SignUpViewController.swift */; };
 		3B3E294E2B9B62AC00D326AF /* logInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3E294D2B9B62AC00D326AF /* logInVC.swift */; };
 		3B3E29502B9B62C900D326AF /* createVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3E294F2B9B62C900D326AF /* createVC.swift */; };
 		3B3E29522B9B62FA00D326AF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3E29512B9B62FA00D326AF /* MainVC.swift */; };
@@ -53,7 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		143B78202BD0148300CC4D67 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		14095B712BD161DB00336E59 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3B3E294D2B9B62AC00D326AF /* logInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logInVC.swift; sourceTree = "<group>"; };
 		3B3E294F2B9B62C900D326AF /* createVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createVC.swift; sourceTree = "<group>"; };
 		3B3E29512B9B62FA00D326AF /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -110,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14095B732BD1620600336E59 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				14095B712BD161DB00336E59 /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		143B781D2BD011C300CC4D67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +182,7 @@
 				3BCC30952B98C3B900E9A4FB /* AppDelegate.swift */,
 				3BCC30972B98C3B900E9A4FB /* SceneDelegate.swift */,
 				3BCC309B2B98C3B900E9A4FB /* Main.storyboard */,
-				143B78202BD0148300CC4D67 /* AuthenticationViewController.swift */,
+				14095B732BD1620600336E59 /* SignUp */,
 				3BA2EB7F2BC9807300676F75 /* Classes */,
 				3BA2EB7E2BC9805900676F75 /* AccountVCs */,
 				3BCC30992B98C3B900E9A4FB /* ViewController.swift */,
@@ -354,9 +362,9 @@
 				3B3E295C2B9B63A500D326AF /* Student.swift in Sources */,
 				3B3E29522B9B62FA00D326AF /* MainVC.swift in Sources */,
 				3BCC30962B98C3B900E9A4FB /* AppDelegate.swift in Sources */,
-				143B78212BD0148300CC4D67 /* AuthenticationViewController.swift in Sources */,
 				3B3E29542B9B630A00D326AF /* UpcomingVC.swift in Sources */,
 				3B3E295A2B9B633F00D326AF /* RedeemVC.swift in Sources */,
+				14095B722BD161DB00336E59 /* SignUpViewController.swift in Sources */,
 				3B3E29502B9B62C900D326AF /* createVC.swift in Sources */,
 				3B3E294E2B9B62AC00D326AF /* logInVC.swift in Sources */,
 				3BCC30982B98C3B900E9A4FB /* SceneDelegate.swift in Sources */,
