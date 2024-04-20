@@ -263,7 +263,7 @@
         <!--MainVC-->
         <scene sceneID="XYk-mU-cnF">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" id="aqP-IV-Sxa" customClass="MainVC" customModule="CLCsuperFanApp_Kaiser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="aqP-IV-Sxa" customClass="MainVC" customModule="CLCsuperFanApp_Kaiser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="18I-j9-BO8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -926,10 +926,10 @@
             </objects>
             <point key="canvasLocation" x="538" y="701"/>
         </scene>
-        <!--Log InVC-->
+        <!--Log In View Controller-->
         <scene sceneID="Z4U-Fc-3EF">
             <objects>
-                <viewController id="f9e-V4-oZG" customClass="logInVC" customModule="CLCsuperFanApp_Kaiser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f9e-V4-oZG" customClass="LogInViewController" customModule="CLCsuperFanApp_Kaiser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JnK-nh-Ogp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -960,8 +960,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdB-55-4EQ">
                                         <rect key="frame" x="0.0" y="136" width="353" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="SignUp"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Log In"/>
                                         <connections>
+                                            <action selector="logInAction:" destination="f9e-V4-oZG" eventType="touchUpInside" id="OZN-oY-JFB"/>
                                             <action selector="signUpTapped:" destination="mtQ-KI-f19" eventType="touchUpInside" id="fOg-0J-oE5"/>
                                         </connections>
                                     </button>
@@ -979,6 +980,10 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="jxm-ec-a27"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="emailTextFieldOutlet" destination="ltB-D9-tj3" id="1sq-JN-lOr"/>
+                        <outlet property="passwordTextFieldOutlet" destination="gBC-uG-AYA" id="p6Q-IE-RQB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1yf-QO-h2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -85,7 +85,7 @@ class SignUpViewController: UIViewController {
     }
     
     func transitionToHome(){
-        if let homeViewController = storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? MainVC{
+        if let homeViewController = storyboard?.instantiateViewController(withIdentifier: "homeVC") as? MainVC{
             
             //transition(from: self, to: homeViewController, duration: 1) {
                 

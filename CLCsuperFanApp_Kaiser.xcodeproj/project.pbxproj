@@ -34,6 +34,7 @@
 		3BCC30CB2B98C50300E9A4FB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3BCC30CA2B98C50300E9A4FB /* FirebaseDatabase */; };
 		3BCC30CD2B98C50300E9A4FB /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3BCC30CC2B98C50300E9A4FB /* FirebaseDatabaseSwift */; };
 		3BCC30CF2B98C50300E9A4FB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3BCC30CE2B98C50300E9A4FB /* FirebaseFirestore */; };
+		85FBBFBA2BD35F4600E6A1C8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FBBFB92BD35F4600E6A1C8 /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		3BCC30B22B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLCsuperFanApp_KaiserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCC30B62B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCsuperFanApp_KaiserUITests.swift; sourceTree = "<group>"; };
 		3BCC30B82B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCsuperFanApp_KaiserUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		85FBBFB92BD35F4600E6A1C8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,14 +114,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14095B732BD1620600336E59 /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-				14095B712BD161DB00336E59 /* SignUpViewController.swift */,
-			);
-			path = SignUp;
-			sourceTree = "<group>";
-		};
 		143B781D2BD011C300CC4D67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,7 +178,7 @@
 				3BCC30952B98C3B900E9A4FB /* AppDelegate.swift */,
 				3BCC30972B98C3B900E9A4FB /* SceneDelegate.swift */,
 				3BCC309B2B98C3B900E9A4FB /* Main.storyboard */,
-				14095B732BD1620600336E59 /* SignUp */,
+				85FBBFBB2BD35F6600E6A1C8 /* Authentication */,
 				3BA2EB7F2BC9807300676F75 /* Classes */,
 				3BA2EB7E2BC9805900676F75 /* AccountVCs */,
 				3BCC30992B98C3B900E9A4FB /* ViewController.swift */,
@@ -214,6 +208,15 @@
 				3BCC30B82B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITestsLaunchTests.swift */,
 			);
 			path = CLCsuperFanApp_KaiserUITests;
+			sourceTree = "<group>";
+		};
+		85FBBFBB2BD35F6600E6A1C8 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				14095B712BD161DB00336E59 /* SignUpViewController.swift */,
+				85FBBFB92BD35F4600E6A1C8 /* LogInViewController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +373,7 @@
 				14095B722BD161DB00336E59 /* SignUpViewController.swift in Sources */,
 				3B3E29502B9B62C900D326AF /* createVC.swift in Sources */,
 				3B3E294E2B9B62AC00D326AF /* logInVC.swift in Sources */,
+				85FBBFBA2BD35F4600E6A1C8 /* LogInViewController.swift in Sources */,
 				3BCC30982B98C3B900E9A4FB /* SceneDelegate.swift in Sources */,
 				3B9E35122BA342E7008D4855 /* AccessCodeVC.swift in Sources */,
 				3B9E35182BA345E4008D4855 /* AdminConsole.swift in Sources */,
