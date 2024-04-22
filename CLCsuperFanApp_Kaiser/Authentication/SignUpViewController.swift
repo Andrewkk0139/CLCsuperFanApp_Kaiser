@@ -69,6 +69,8 @@ class SignUpViewController: UIViewController {
                 //checks for errors
                 if let err = err{
                     //There was an error creating the user
+                    self.errorLabel.textColor = UIColor.red
+                    self.errorLabel.text = "\(err)"
                     print(err)
                 }else{
                     //User was added successfully
@@ -92,7 +94,8 @@ class SignUpViewController: UIViewController {
                 }
             }
         }else{
-            print(error!)
+            self.errorLabel.textColor = UIColor.red
+            self.errorLabel.text = "\(error)"
         }
         
        

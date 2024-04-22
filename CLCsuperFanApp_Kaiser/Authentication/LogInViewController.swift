@@ -52,7 +52,8 @@ class LogInViewController: UIViewController {
             //logIn
             Auth.auth().signIn(withEmail: email, password: password) { result, error in
                 if error != nil{
-                    print(error)
+                    self.errorLabel.textColor = UIColor.red
+                    self.errorLabel.text = "\(error)"
                 }else{
                    
                         
@@ -71,7 +72,8 @@ class LogInViewController: UIViewController {
                     }
             }
         } else{
-            print(validateFields())
+            self.errorLabel.textColor = UIColor.red
+            self.errorLabel.text = validateFields()
         }
     }
 }
