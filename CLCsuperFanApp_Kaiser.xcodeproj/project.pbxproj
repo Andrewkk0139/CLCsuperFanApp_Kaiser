@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		14095B722BD161DB00336E59 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14095B712BD161DB00336E59 /* SignUpViewController.swift */; };
 		14A1AB262BD2B9F500B26820 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 14A1AB252BD2B9F500B26820 /* FirebaseAnalytics */; };
+		357C914D2BD6B44C00F053BA /* VCScoreName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357C914C2BD6B44C00F053BA /* VCScoreName.swift */; };
 		3B3E294E2B9B62AC00D326AF /* logInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3E294D2B9B62AC00D326AF /* logInVC.swift */; };
 		3B3E29502B9B62C900D326AF /* createVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3E294F2B9B62C900D326AF /* createVC.swift */; };
 		3B3E29522B9B62FA00D326AF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3E29512B9B62FA00D326AF /* MainVC.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		14095B712BD161DB00336E59 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		357C914C2BD6B44C00F053BA /* VCScoreName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCScoreName.swift; sourceTree = "<group>"; };
 		3B3E294D2B9B62AC00D326AF /* logInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logInVC.swift; sourceTree = "<group>"; };
 		3B3E294F2B9B62C900D326AF /* createVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createVC.swift; sourceTree = "<group>"; };
 		3B3E29512B9B62FA00D326AF /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				3BCC30952B98C3B900E9A4FB /* AppDelegate.swift */,
 				3BCC30972B98C3B900E9A4FB /* SceneDelegate.swift */,
 				3BCC309B2B98C3B900E9A4FB /* Main.storyboard */,
+				357C914C2BD6B44C00F053BA /* VCScoreName.swift */,
 				85FBBFBB2BD35F6600E6A1C8 /* Authentication */,
 				3BA2EB7F2BC9807300676F75 /* Classes */,
 				3BA2EB7E2BC9805900676F75 /* AccountVCs */,
@@ -365,6 +368,7 @@
 				3B3E29562B9B631A00D326AF /* StatsVC.swift in Sources */,
 				3B9E35162BA343E0008D4855 /* AccessCode.swift in Sources */,
 				3BCC309A2B98C3B900E9A4FB /* ViewController.swift in Sources */,
+				357C914D2BD6B44C00F053BA /* VCScoreName.swift in Sources */,
 				3B3E295C2B9B63A500D326AF /* Student.swift in Sources */,
 				3B3E29522B9B62FA00D326AF /* MainVC.swift in Sources */,
 				3BCC30962B98C3B900E9A4FB /* AppDelegate.swift in Sources */,

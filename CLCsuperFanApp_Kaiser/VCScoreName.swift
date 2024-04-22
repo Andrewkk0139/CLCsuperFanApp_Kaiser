@@ -9,10 +9,15 @@ import UIKit
 
 class VCScoreName: UIViewController {
 
+    @IBOutlet weak var nameOutlet: UILabel!
+    
+    @IBOutlet weak var scoreOutlet: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        nameOutlet.text = "Name:"
+        scoreOutlet.text = "Score:"
+       
     }
     
 
