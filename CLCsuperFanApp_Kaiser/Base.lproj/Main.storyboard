@@ -910,7 +910,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="T3T-aM-ymm">
-                                <rect key="frame" x="20" y="103" width="353" height="260.33333333333331"/>
+                                <rect key="frame" x="20" y="102.99999999999997" width="353" height="321.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgr-Wm-r7x">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="35"/>
@@ -946,6 +946,12 @@
                                             <action selector="signUpTapped:" destination="mtQ-KI-f19" eventType="touchUpInside" id="fdM-t8-cDQ"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzq-dv-IyI">
+                                        <rect key="frame" x="0.0" y="271.33333333333331" width="353" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -960,6 +966,7 @@
                     <navigationItem key="navigationItem" id="zTx-Fl-kjv"/>
                     <connections>
                         <outlet property="emailTextField" destination="9l1-oa-Tyu" id="3vt-mg-zg2"/>
+                        <outlet property="errorLabel" destination="Zzq-dv-IyI" id="qio-vg-4dx"/>
                         <outlet property="firstNameTextField" destination="kEC-R8-Zxm" id="6op-DI-wgK"/>
                         <outlet property="lastNameTextField" destination="q3k-jC-Kh0" id="R1I-jA-jRY"/>
                         <outlet property="passwordTextField" destination="Vla-lF-bUL" id="J0e-3s-g5c"/>
@@ -982,7 +989,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ZQk-qo-rc7">
-                                <rect key="frame" x="20" y="103.00000000000001" width="353" height="170.33333333333337"/>
+                                <rect key="frame" x="20" y="103.00000000000001" width="353" height="231.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8A2-17-zon">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="35"/>
@@ -1009,6 +1016,12 @@
                                             <action selector="signUpTapped:" destination="mtQ-KI-f19" eventType="touchUpInside" id="fOg-0J-oE5"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdl-xF-IMH">
+                                        <rect key="frame" x="0.0" y="181.33333333333331" width="353" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -1025,13 +1038,14 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailTextFieldOutlet" destination="ltB-D9-tj3" id="1sq-JN-lOr"/>
+                        <outlet property="errorLabel" destination="Xdl-xF-IMH" id="xBl-GU-dv2"/>
                         <outlet property="passwordTextFieldOutlet" destination="gBC-uG-AYA" id="p6Q-IE-RQB"/>
                         <segue destination="eSn-Bd-bjs" kind="show" identifier="toAdmin" id="sDw-QJ-k2X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1yf-QO-h2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-463" y="701"/>
+            <point key="canvasLocation" x="-463.35877862595419" y="700.70422535211276"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -18,6 +18,9 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var errorLabel: UILabel!
+    
+    
     var ref: DatabaseReference!
     
     override func viewDidLoad() {

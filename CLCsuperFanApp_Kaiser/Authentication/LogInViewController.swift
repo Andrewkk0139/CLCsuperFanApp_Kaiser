@@ -12,6 +12,7 @@ class LogInViewController: UIViewController {
     
     @IBOutlet weak var emailTextFieldOutlet: UITextField!
     @IBOutlet weak var passwordTextFieldOutlet: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
     
     override func viewDidLoad() {
