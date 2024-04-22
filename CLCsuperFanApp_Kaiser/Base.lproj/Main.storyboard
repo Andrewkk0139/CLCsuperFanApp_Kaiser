@@ -789,17 +789,17 @@
                         <outlet property="rankOutlet" destination="720-SH-ob7" id="zO4-hv-bji"/>
                         <outlet property="rankUsernameTextOutlet" destination="4o9-aL-0Bx" id="tvP-49-DBc"/>
                         <outlet property="tableViewOutlet" destination="Ktu-01-uhk" id="jT3-ng-NY2"/>
-                        <segue destination="F4V-N9-2dU" kind="show" id="MEw-Dm-g6G"/>
+                        <segue destination="F4V-N9-2dU" kind="show" identifier="toBlah" id="MEw-Dm-g6G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8R-tN-tNQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4238.9312977099235" y="-363.38028169014086"/>
         </scene>
-        <!--View Controller-->
+        <!--Score Name-->
         <scene sceneID="xZN-GN-VrL">
             <objects>
-                <viewController id="F4V-N9-2dU" sceneMemberID="viewController">
+                <viewController id="F4V-N9-2dU" customClass="VCScoreName" customModule="CLCsuperFanApp_Kaiser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TCx-Hb-4Jg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -823,10 +823,14 @@
                         <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="2aj-dp-3OI"/>
+                    <connections>
+                        <outlet property="nameOutlet" destination="ABr-fs-KfH" id="Er8-9Q-JAY"/>
+                        <outlet property="scoreOutlet" destination="9EK-a8-rNJ" id="yrX-eF-ZwT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dX9-IN-qiy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4970" y="-351"/>
+            <point key="canvasLocation" x="4968.7022900763359" y="-351.40845070422534"/>
         </scene>
         <!--StatsVC-->
         <scene sceneID="gWI-Qx-Hz5">
@@ -956,7 +960,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sz9-hm-idv"/>
-                        <color key="backgroundColor" red="0.78039215689999997" green="0.35294117650000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="T3T-aM-ymm" secondAttribute="trailing" constant="20" id="6Dd-ct-pDw"/>
                             <constraint firstItem="T3T-aM-ymm" firstAttribute="top" secondItem="Sz9-hm-idv" secondAttribute="top" id="6hw-ud-3Du"/>
@@ -1026,7 +1030,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cL3-mI-xDB"/>
-                        <color key="backgroundColor" red="0.78039215689999997" green="0.35294117650000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZQk-qo-rc7" firstAttribute="top" secondItem="cL3-mI-xDB" secondAttribute="top" id="MxQ-Mf-Ckm"/>
                             <constraint firstItem="ZQk-qo-rc7" firstAttribute="leading" secondItem="cL3-mI-xDB" secondAttribute="leading" constant="20" id="nZd-ec-jNq"/>

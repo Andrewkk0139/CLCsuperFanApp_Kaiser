@@ -37,6 +37,16 @@ class LeaderboardVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         cell.detailTextLabel!.text = "#\(AppData.masterUsers[indexPath.row].globalRank)"
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        let blah = indexPath.row
+        print(blah)
+        AppData.count = blah
+      
+            //performSegue(withIdentifier: "toOne", sender: self)
+        performSegue(withIdentifier: "toBlah", sender: self)
+        
+    }
     
 
     
