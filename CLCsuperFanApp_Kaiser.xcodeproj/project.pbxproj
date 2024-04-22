@@ -67,7 +67,7 @@
 		3B9E35112BA342E7008D4855 /* AccessCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCodeVC.swift; sourceTree = "<group>"; };
 		3B9E35152BA343E0008D4855 /* AccessCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCode.swift; sourceTree = "<group>"; };
 		3B9E35172BA345E4008D4855 /* AdminConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminConsole.swift; sourceTree = "<group>"; };
-		3BA827422B9F54390037B0DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3BA827422B9F54390037B0DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3BCC30922B98C3B900E9A4FB /* CLCsuperFanApp_Kaiser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLCsuperFanApp_Kaiser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCC30952B98C3B900E9A4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BCC30972B98C3B900E9A4FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };

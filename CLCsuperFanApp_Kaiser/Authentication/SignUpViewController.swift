@@ -95,7 +95,7 @@ class SignUpViewController: UIViewController {
             }
         }else{
             self.errorLabel.textColor = UIColor.red
-            self.errorLabel.text = "\(error)"
+            self.errorLabel.text = "\(error!)"
         }
         
        
