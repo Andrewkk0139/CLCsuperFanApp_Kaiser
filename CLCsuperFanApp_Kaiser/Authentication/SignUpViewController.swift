@@ -18,9 +18,12 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
 
         
     }
@@ -58,6 +61,7 @@ class SignUpViewController: UIViewController {
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
+            
             Auth.auth().createUser(withEmail: email, password: password) { result, err in
                 //checks for errors
                 if let err = err{
@@ -66,6 +70,13 @@ class SignUpViewController: UIViewController {
                 }else{
                     //User was added successfully
                     //create user
+                    let student = Student(firstName: firstName, lastName: lastName, email: email, uid: result!.user.uid, points: 0)
+                    
+                    student.saveToFirebase()
+                    AppData.masterUsers.append(student)
+                    AppData.user = student
+                    
+                    
                     let db = Firestore.firestore()
                     db.collection("users").addDocument(data: ["firstName" : firstName, "lastName" : lastName, "uid" : result!.user.uid]) { error in
                         if error != nil{
@@ -85,12 +96,10 @@ class SignUpViewController: UIViewController {
     }
     
     func transitionToHome(){
-        if let homeViewController = storyboard?.instantiateViewController(withIdentifier: "homeVC") as? MainVC{
-            
-            //transition(from: self, to: homeViewController, duration: 1) {
-                
-            //}
-        }
+        let homeViewController = self.storyboard?.instantiateViewController(identifier: "homeVC") as? MainVC
+        
+        self.view.window?.rootViewController = homeViewController
+        self.view.window?.makeKeyAndVisible()
     }
     
 

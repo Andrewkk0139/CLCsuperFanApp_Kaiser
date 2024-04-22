@@ -14,8 +14,10 @@ class MainVC: UIViewController {
     @IBOutlet weak var pointsOutlet: UILabel!
     var ref: DatabaseReference!
 // setup for firebase
+    @IBOutlet weak var logOutButton: UIButton!
     
     override func viewDidLoad() {
+        logOutButton.tintColor = UIColor.red
         print("view loaded")
         super.viewDidLoad()
         print("Users firebase key: \(AppData.user.firebaseKey)")
@@ -44,6 +46,17 @@ class MainVC: UIViewController {
     }
     @IBAction func codeAction(_ sender: Any) {
         performSegue(withIdentifier: "toCode", sender: self)
+    }
+    
+    
+    
+    @IBAction func logOutAction(_ sender: Any) {
+    
+        let introViewController = self.storyboard?.instantiateViewController(identifier: "navigationViewController") as? UINavigationController
+        
+        self.view.window?.rootViewController = introViewController
+        self.view.window?.makeKeyAndVisible()
+        
     }
     
 }

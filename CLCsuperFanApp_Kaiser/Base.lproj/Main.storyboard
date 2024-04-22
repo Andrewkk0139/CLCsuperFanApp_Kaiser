@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CLCsuperFanApp_Kaiser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="intro" id="BYZ-38-t0r" customClass="ViewController" customModule="CLCsuperFanApp_Kaiser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,10 +49,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLt-d8-b2B">
-                                <rect key="frame" x="129" y="763" width="135" height="35"/>
+                                <rect key="frame" x="155" y="763" width="84" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Authentication"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
                                 <connections>
                                     <segue destination="mtQ-KI-f19" kind="show" id="qoE-2V-QoS"/>
                                 </connections>
@@ -356,12 +356,22 @@
                                     <action selector="codeAction:" destination="aqP-IV-Sxa" eventType="touchUpInside" id="i7P-Ft-LJi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0P-61-hji">
+                                <rect key="frame" x="286" y="112" width="85" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutAction:" destination="aqP-IV-Sxa" eventType="touchUpInside" id="zm0-iH-aeN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FnD-Oa-X3R"/>
                         <color key="backgroundColor" red="0.78039215689999997" green="0.35294117650000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="ymw-jW-baF"/>
                     <connections>
+                        <outlet property="logOutButton" destination="V0P-61-hji" id="FCD-7z-eYQ"/>
                         <outlet property="pointsOutlet" destination="ZU9-9D-Nyp" id="WF6-hF-rmw"/>
                         <outlet property="usernameTextOutlet" destination="D5g-KB-W7p" id="XU8-qb-yjB"/>
                         <segue destination="HgR-bV-SZL" kind="show" identifier="toUpcomingEvents" id="QFN-qT-Cp7"/>
@@ -378,7 +388,7 @@
         <!--Admin Console-->
         <scene sceneID="flQ-kC-LZc">
             <objects>
-                <viewController id="hRd-kp-RdW" customClass="AdminConsole" customModule="CLCsuperFanApp_Kaiser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="admin" id="hRd-kp-RdW" customClass="AdminConsole" customModule="CLCsuperFanApp_Kaiser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HjO-Gt-DR2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -546,7 +556,7 @@
         <!--Navigation Controller-->
         <scene sceneID="DXC-ul-FqL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bor-Ea-Tg0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="Bor-Ea-Tg0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OPO-1z-yo3">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -826,7 +836,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[Username]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hp-9g-kXQ">
-                                <rect key="frame" x="9" y="178" width="148" height="35"/>
+                                <rect key="frame" x="9" y="178" width="271" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -983,6 +993,7 @@
                     <connections>
                         <outlet property="emailTextFieldOutlet" destination="ltB-D9-tj3" id="1sq-JN-lOr"/>
                         <outlet property="passwordTextFieldOutlet" destination="gBC-uG-AYA" id="p6Q-IE-RQB"/>
+                        <segue destination="eSn-Bd-bjs" kind="show" identifier="toAdmin" id="sDw-QJ-k2X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1yf-QO-h2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -991,7 +1002,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sw5-U5-W4a"/>
+        <segue reference="Ktk-l8-e1q"/>
+        <segue reference="LNI-qR-H6N"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="clcTigers" width="505" height="494"/>
@@ -1000,7 +1012,7 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
