@@ -37,19 +37,22 @@ class SignUpViewController: UIViewController {
     }
     
     func validateFields() -> String?{
-      
+        
         if firstNameTextField.text?.trimmingCharacters(in: .whitespaces) == "" || lastNameTextField.text?.trimmingCharacters(in: .whitespaces) == "" || emailTextField.text?.trimmingCharacters(in: .whitespaces) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespaces) == ""{
             return "Please fill in all fields"
         }
-        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespaces)
         
-        if isPasswordValid(cleanedPassword){
+        let cleanedEmail = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespaces)
+            
+            if isPasswordValid(cleanedPassword){
                 
-        }else{
-            return "Ensure your password is at least 8 characters, contains a special character and a number"
-        }
-        
-        return nil
+            }else{
+                return "Ensure your password is at least 8 characters, contains a special character and a number"
+            }
+            
+            return nil
     }
 
     @IBAction func signUpTapped(_ sender: Any) {
@@ -70,7 +73,7 @@ class SignUpViewController: UIViewController {
                 if let err = err{
                     //There was an error creating the user
                     self.errorLabel.textColor = UIColor.red
-                    self.errorLabel.text = "\(err)"
+                    self.errorLabel.text = "\(err.localizedDescription)"
                     print(err)
                 }else{
                     //User was added successfully
