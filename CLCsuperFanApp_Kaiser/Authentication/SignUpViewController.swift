@@ -4,11 +4,9 @@
 //
 //  Created by STANISLAV STAJILA on 4/18/24.
 //
-
 import UIKit
 import FirebaseAuth
 import Firebase
-
 class SignUpViewController: UIViewController {
     @IBOutlet weak var firstNameTextField: UITextField!
     
@@ -27,7 +25,6 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         
         ref = Database.database().reference()
-
         
     }
     
@@ -54,7 +51,6 @@ class SignUpViewController: UIViewController {
             
             return nil
     }
-
     @IBAction func signUpTapped(_ sender: Any) {
         
         //validate fields
@@ -81,7 +77,6 @@ class SignUpViewController: UIViewController {
                     let student = Student(firstName: firstName, lastName: lastName, email: email, uid: result!.user.uid, points: 0)
                     
                     student.saveToFirebase()
-                    AppData.masterUsers.append(student)
                     AppData.user = student
                     
                     
@@ -111,6 +106,5 @@ class SignUpViewController: UIViewController {
         self.view.window?.makeKeyAndVisible()
     }
     
-
 }
 
