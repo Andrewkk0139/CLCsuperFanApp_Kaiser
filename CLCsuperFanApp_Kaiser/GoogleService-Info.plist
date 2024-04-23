@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyDVx-eVaw54rP4dDcLWL-F_QFq5C0kJr-c</string>
+	<string>AIzaSyCxuml0kxgWsrTCvYWtFR1C1Ww9jE-g9Ys</string>
 	<key>GCM_SENDER_ID</key>
-	<string>712482855173</string>
+	<string>935211021478</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>clc.recipesApp-Kaiser</string>
+	<string>clc.CLCsuperFanApp-Kaiser</string>
 	<key>PROJECT_ID</key>
-	<string>recipesapp-7d3dd</string>
+	<string>clcsuperfanapp</string>
 	<key>STORAGE_BUCKET</key>
-	<string>recipesapp-7d3dd.appspot.com</string>
+	<string>clcsuperfanapp.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,8 +25,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:712482855173:ios:aa83a8154b4f28e504bf6c</string>
+	<string>1:935211021478:ios:1586b58b090f00907fb067</string>
 	<key>DATABASE_URL</key>
-	<string>https://recipesapp-7d3dd-default-rtdb.firebaseio.com</string>
+	<string>https://clcsuperfanapp-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

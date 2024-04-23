@@ -49,13 +49,22 @@ class LogInViewController: UIViewController {
         if validateFields() == nil{
             let email = emailTextFieldOutlet.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextFieldOutlet.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            //logIn
-            Auth.auth().signIn(withEmail: email, password: password) { result, error in
-                if error != nil{
-                    self.errorLabel.textColor = UIColor.red
-                    self.errorLabel.text = "\(error!.localizedDescription)"
-                }else{
-                   
+            
+            if email != "admin@d155.org" {
+                //logIn
+                Auth.auth().signIn(withEmail: email, password: password) { result, error in
+                    if error != nil{
+                        
+                        if error?.localizedDescription != "The supplied auth credential is malformed or has expired." {
+                            
+                            self.errorLabel.textColor = UIColor.red
+                            self.errorLabel.text = "\(error!.localizedDescription)"
+                        }else{
+                            self.errorLabel.textColor = UIColor.red
+                            self.errorLabel.text = "Invalid email or password."
+                        }
+                    }else{
+                        
                         
                         for stud in AppData.masterUsers{
                             if stud.uid == result?.user.uid{
@@ -70,10 +79,16 @@ class LogInViewController: UIViewController {
                         self.view.window?.rootViewController = homeViewController
                         self.view.window?.makeKeyAndVisible()
                     }
+                }
+            }else{
+                if password == "admin123!"{
+                    
+                }
+                
             }
-        } else{
-            self.errorLabel.textColor = UIColor.red
-            self.errorLabel.text = validateFields()
+            } else{
+                self.errorLabel.textColor = UIColor.red
+                self.errorLabel.text = validateFields()
+            }
         }
     }
-}
