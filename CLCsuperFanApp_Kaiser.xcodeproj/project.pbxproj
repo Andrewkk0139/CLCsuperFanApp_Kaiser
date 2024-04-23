@@ -18,10 +18,10 @@
 		3B3E29582B9B633100D326AF /* LeaderboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3E29572B9B633100D326AF /* LeaderboardVC.swift */; };
 		3B3E295A2B9B633F00D326AF /* RedeemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3E29592B9B633F00D326AF /* RedeemVC.swift */; };
 		3B3E295C2B9B63A500D326AF /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3E295B2B9B63A500D326AF /* Student.swift */; };
+		3B433AFD2BD7FA0500814150 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B433AFC2BD7FA0500814150 /* GoogleService-Info.plist */; };
 		3B9E35122BA342E7008D4855 /* AccessCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E35112BA342E7008D4855 /* AccessCodeVC.swift */; };
 		3B9E35162BA343E0008D4855 /* AccessCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E35152BA343E0008D4855 /* AccessCode.swift */; };
 		3B9E35182BA345E4008D4855 /* AdminConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E35172BA345E4008D4855 /* AdminConsole.swift */; };
-		3BA827432B9F54390037B0DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BA827422B9F54390037B0DF /* GoogleService-Info.plist */; };
 		3BCC30962B98C3B900E9A4FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC30952B98C3B900E9A4FB /* AppDelegate.swift */; };
 		3BCC30982B98C3B900E9A4FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC30972B98C3B900E9A4FB /* SceneDelegate.swift */; };
 		3BCC309A2B98C3B900E9A4FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC30992B98C3B900E9A4FB /* ViewController.swift */; };
@@ -66,6 +66,7 @@
 		3B3E29572B9B633100D326AF /* LeaderboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardVC.swift; sourceTree = "<group>"; };
 		3B3E29592B9B633F00D326AF /* RedeemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemVC.swift; sourceTree = "<group>"; };
 		3B3E295B2B9B63A500D326AF /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		3B433AFC2BD7FA0500814150 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B9E35112BA342E7008D4855 /* AccessCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCodeVC.swift; sourceTree = "<group>"; };
 		3B9E35152BA343E0008D4855 /* AccessCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCode.swift; sourceTree = "<group>"; };
 		3B9E35172BA345E4008D4855 /* AdminConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminConsole.swift; sourceTree = "<group>"; };
@@ -190,7 +191,7 @@
 				3BA2EB802BC980AF00676F75 /* FourOptions */,
 				3BCC309E2B98C3BA00E9A4FB /* Assets.xcassets */,
 				3BCC30A02B98C3BA00E9A4FB /* LaunchScreen.storyboard */,
-				3BA827422B9F54390037B0DF /* GoogleService-Info.plist */,
+				3B433AFC2BD7FA0500814150 /* GoogleService-Info.plist */,
 				3BCC30A32B98C3BA00E9A4FB /* Info.plist */,
 			);
 			path = CLCsuperFanApp_Kaiser;
@@ -337,7 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BCC30A22B98C3BA00E9A4FB /* LaunchScreen.storyboard in Resources */,
-				3BA827432B9F54390037B0DF /* GoogleService-Info.plist in Resources */,
+				3B433AFD2BD7FA0500814150 /* GoogleService-Info.plist in Resources */,
 				3BCC309F2B98C3BA00E9A4FB /* Assets.xcassets in Resources */,
 				3BCC309D2B98C3B900E9A4FB /* Main.storyboard in Resources */,
 			);

@@ -16,6 +16,7 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate {
     @IBOutlet weak var codeRedOutlet: UILabel!
     @IBOutlet weak var codeInvalidOutlet: UILabel!
     @IBOutlet weak var codeAlrRedeemedOutlet: UILabel!
+    @IBOutlet weak var adminPasswordOutlet: UITextField!
     var ref: DatabaseReference!
     var latitude = 0.0
     var longitude = 0.0
@@ -43,9 +44,9 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate {
         
         latitude = Double(locationManager.location!.coordinate.latitude)
         longitude = Double(locationManager.location!.coordinate.longitude)
+        var adminPassword = adminPasswordOutlet.text
         
-        
-        if((42.231 ... 42.238).contains(latitude) && (-88.327 ... -88.320).contains(longitude)){
+        if((42.231 ... 42.238).contains(latitude) && (-88.327 ... -88.320).contains(longitude) || adminPassword == "d155Admin"){
             codeRedOutlet.isHidden = true
             codeInvalidOutlet.isHidden = true
             codeAlrRedeemedOutlet.isHidden = true
