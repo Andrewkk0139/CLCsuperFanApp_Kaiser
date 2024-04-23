@@ -14,7 +14,7 @@ struct AppData {
     static var user: Student!
     static var masterUsers: [Student] = []
     static var masterCodes: [AccessCode] = []
-    static var count = 0
+    static var count = 0 
 }
 
 class ViewController: UIViewController {
