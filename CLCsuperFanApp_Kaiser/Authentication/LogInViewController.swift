@@ -4,10 +4,8 @@
 //
 //  Created by Stanislav Stajila on 4/19/24.
 //
-
 import UIKit
 import FirebaseAuth
-
 class LogInViewController: UIViewController {
     
     @IBOutlet weak var emailTextFieldOutlet: UITextField!
@@ -37,7 +35,7 @@ class LogInViewController: UIViewController {
         if isPasswordValid(cleanedPassword){
             
         }else{
-            return "Ensure your password is at least 8 characters, contains a special character and a number"
+            return "Invalid email or password."
         }
         
         return nil
@@ -82,7 +80,12 @@ class LogInViewController: UIViewController {
                 }
             }else{
                 if password == "admin123!"{
+                    performSegue(withIdentifier: "toAdmin", sender: self)
+                    return
                     
+                }else{
+                    self.errorLabel.textColor = UIColor.red
+                    self.errorLabel.text = "Invalid email or password."
                 }
                 
             }
@@ -92,3 +95,4 @@ class LogInViewController: UIViewController {
             }
         }
     }
+
