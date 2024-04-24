@@ -1070,7 +1070,7 @@
                         <outlet property="emailTextFieldOutlet" destination="ltB-D9-tj3" id="1sq-JN-lOr"/>
                         <outlet property="errorLabel" destination="Xdl-xF-IMH" id="xBl-GU-dv2"/>
                         <outlet property="passwordTextFieldOutlet" destination="gBC-uG-AYA" id="p6Q-IE-RQB"/>
-                        <segue destination="eSn-Bd-bjs" kind="show" identifier="toAdmin" id="sDw-QJ-k2X"/>
+                        <segue destination="hRd-kp-RdW" kind="show" identifier="toAdmin" id="ASL-TD-Rf2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1yf-QO-h2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1079,8 +1079,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="ASL-TD-Rf2"/>
         <segue reference="Ktk-l8-e1q"/>
-        <segue reference="LNI-qR-H6N"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="clcTigers" width="505" height="494"/>
