@@ -20,6 +20,7 @@ import FirebaseDatabase
     var firebaseKey = ""
     var globalRank = 0
     var usedCodes: [String] = []
+
      
     var ref = Database.database().reference()
 
@@ -96,4 +97,8 @@ import FirebaseDatabase
      func declareRank(_ i: Int) {
          globalRank = i + 1
      }
+}
+class Blah{
+    var count = 0
+    
 }
