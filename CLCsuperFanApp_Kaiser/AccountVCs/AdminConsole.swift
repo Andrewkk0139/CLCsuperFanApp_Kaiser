@@ -21,7 +21,7 @@ class AdminConsole: UIViewController {
         super.viewDidLoad()
         ref = Database.database().reference()
         // Do any additional setup after loading the view.
-        successfullyOutlet.isHidden = true
+        //successfullyOutlet.isHidden = true
         
     }
     
