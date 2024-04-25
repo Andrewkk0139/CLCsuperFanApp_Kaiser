@@ -105,7 +105,7 @@ class LogInViewController: UIViewController {
         videoPlayerLayer = AVPlayerLayer(player: videoPlayer!)
         //adjust size of a frame
         videoPlayerLayer?.frame = self.view.frame
-        
+        videoPlayerLayer?.videoGravity = .resizeAspectFill
         //CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: view.frame.size.height)
         
     
