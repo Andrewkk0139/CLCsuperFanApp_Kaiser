@@ -14,7 +14,8 @@
 ////    static var user: Student!
 ////    static var masterUsers: [Student] = []
 ////    static var masterCodes: [AccessCode] = []
-////    static var count = 0 
+////    sta
+////    static var count = 0
 ////}
 //
 //class ViewController: UIViewController {

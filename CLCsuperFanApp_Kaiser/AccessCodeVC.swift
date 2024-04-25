@@ -119,6 +119,12 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate {
                 codeInvalidOutlet.isHidden = true
             }
         }
+        else{
+            let alert = UIAlertController(title: "ERROR", message: "You must be on campus to redeem points", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "ok", style: .default , handler: nil)
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+        }
         // end of func
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

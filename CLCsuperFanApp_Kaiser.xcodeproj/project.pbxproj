@@ -36,6 +36,7 @@
 		3BCC30CB2B98C50300E9A4FB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3BCC30CA2B98C50300E9A4FB /* FirebaseDatabase */; };
 		3BCC30CD2B98C50300E9A4FB /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3BCC30CC2B98C50300E9A4FB /* FirebaseDatabaseSwift */; };
 		3BCC30CF2B98C50300E9A4FB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3BCC30CE2B98C50300E9A4FB /* FirebaseFirestore */; };
+		3BEEF3D82BDA9DA700579D09 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEF3D72BDA9DA700579D09 /* Event.swift */; };
 		85FBBFBA2BD35F4600E6A1C8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FBBFB92BD35F4600E6A1C8 /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		3BCC30B22B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CLCsuperFanApp_KaiserUITests; path = CLCsuperFanApp_KaiserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCC30B62B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCsuperFanApp_KaiserUITests.swift; sourceTree = "<group>"; };
 		3BCC30B82B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCsuperFanApp_KaiserUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3BEEF3D72BDA9DA700579D09 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		85FBBFB92BD35F4600E6A1C8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 			children = (
 				3B3E295B2B9B63A500D326AF /* Student.swift */,
 				3B9E35152BA343E0008D4855 /* AccessCode.swift */,
+				3BEEF3D72BDA9DA700579D09 /* Event.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				3BCC30962B98C3B900E9A4FB /* AppDelegate.swift in Sources */,
 				3B3E29542B9B630A00D326AF /* UpcomingVC.swift in Sources */,
 				3B3E295A2B9B633F00D326AF /* RedeemVC.swift in Sources */,
+				3BEEF3D82BDA9DA700579D09 /* Event.swift in Sources */,
 				14095B722BD161DB00336E59 /* SignUpViewController.swift in Sources */,
 				3B3E29502B9B62C900D326AF /* createVC.swift in Sources */,
 				3B3E294E2B9B62AC00D326AF /* logInVC.swift in Sources */,
