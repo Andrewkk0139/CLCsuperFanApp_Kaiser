@@ -25,7 +25,7 @@ class AdminConsole: UIViewController {
         ref = Database.database().reference()
         // Do any additional setup after loading the view.
         //successfullyOutlet.isHidden = true
-        
+        eventMadeOutlet.isHidden = true
     }
     
     @IBAction func createCodeAction(_ sender: Any) {
@@ -49,7 +49,24 @@ class AdminConsole: UIViewController {
     }
     
     @IBAction func makeEventButtonAction(_ sender: Any) {
+        var check = AppData.masterEvents.count
+        var newEvent = Event(title: titleFieldOutlet.text!, date: dateFieldOutlet.text!)
+        for i in 0..<AppData.masterEvents.count{
+            if (newEvent.title == AppData.masterEvents[i].title){
+                check -= 1
+            }
+        }
+        if check == AppData.masterEvents.count {
+            // No dupe events found
+            print("Event made!")
+            newEvent.saveToFirebase()
+            //AppData.masterEvents.append(newEvent)
+            eventMadeOutlet.isHidden = false
+        } else {
+            print("Event already exists")
+        }
         
+
     }
     
 

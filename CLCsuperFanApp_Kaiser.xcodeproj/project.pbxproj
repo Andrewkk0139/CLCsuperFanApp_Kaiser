@@ -35,6 +35,7 @@
 		3BCC30CB2B98C50300E9A4FB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3BCC30CA2B98C50300E9A4FB /* FirebaseDatabase */; };
 		3BCC30CD2B98C50300E9A4FB /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3BCC30CC2B98C50300E9A4FB /* FirebaseDatabaseSwift */; };
 		3BCC30CF2B98C50300E9A4FB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3BCC30CE2B98C50300E9A4FB /* FirebaseFirestore */; };
+		3BEEF3D82BDA9DA700579D09 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEF3D72BDA9DA700579D09 /* Event.swift */; };
 		85FBBFBA2BD35F4600E6A1C8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FBBFB92BD35F4600E6A1C8 /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +71,6 @@
 		3B9E35112BA342E7008D4855 /* AccessCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCodeVC.swift; sourceTree = "<group>"; };
 		3B9E35152BA343E0008D4855 /* AccessCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCode.swift; sourceTree = "<group>"; };
 		3B9E35172BA345E4008D4855 /* AdminConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminConsole.swift; sourceTree = "<group>"; };
-		3BA827422B9F54390037B0DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3BCC30922B98C3B900E9A4FB /* CLCsuperFanApp_Kaiser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLCsuperFanApp_Kaiser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCC30952B98C3B900E9A4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BCC30972B98C3B900E9A4FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,11 +79,12 @@
 		3BCC309E2B98C3BA00E9A4FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BCC30A12B98C3BA00E9A4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BCC30A32B98C3BA00E9A4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BCC30A82B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CLCsuperFanApp_KaiserTests; path = ../../../../../../../../Documents/CLCsuperFanApp_Kaiser/CLCsuperFanApp_KaiserTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BCC30A82B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CLCsuperFanApp_KaiserTests; path = CLCsuperFanApp_KaiserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCC30AC2B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCsuperFanApp_KaiserTests.swift; sourceTree = "<group>"; };
-		3BCC30B22B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CLCsuperFanApp_KaiserUITests; path = ../../../../../../../../Documents/CLCsuperFanApp_Kaiser/CLCsuperFanApp_KaiserUITests; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BCC30B22B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CLCsuperFanApp_KaiserUITests; path = CLCsuperFanApp_KaiserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCC30B62B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCsuperFanApp_KaiserUITests.swift; sourceTree = "<group>"; };
 		3BCC30B82B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCsuperFanApp_KaiserUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3BEEF3D72BDA9DA700579D09 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		85FBBFB92BD35F4600E6A1C8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +140,7 @@
 			children = (
 				3B3E295B2B9B63A500D326AF /* Student.swift */,
 				3B9E35152BA343E0008D4855 /* AccessCode.swift */,
+				3BEEF3D72BDA9DA700579D09 /* Event.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -375,6 +377,7 @@
 				3BCC30962B98C3B900E9A4FB /* AppDelegate.swift in Sources */,
 				3B3E29542B9B630A00D326AF /* UpcomingVC.swift in Sources */,
 				3B3E295A2B9B633F00D326AF /* RedeemVC.swift in Sources */,
+				3BEEF3D82BDA9DA700579D09 /* Event.swift in Sources */,
 				14095B722BD161DB00336E59 /* SignUpViewController.swift in Sources */,
 				3B3E29502B9B62C900D326AF /* createVC.swift in Sources */,
 				3B3E294E2B9B62AC00D326AF /* logInVC.swift in Sources */,

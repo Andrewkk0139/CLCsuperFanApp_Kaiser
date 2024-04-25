@@ -13,6 +13,7 @@ struct AppData {
     static var user: Student!
     static var masterUsers: [Student] = []
     static var masterCodes: [AccessCode] = []
+    static var masterEvents: [Event] = []
     static var count = 0
 }
 
@@ -62,7 +63,19 @@ class LogInViewController: UIViewController {
         
         // called after .childAdded
         ref.child("Codes").observeSingleEvent(of: .value, with: { snapshot in
-                print("--inital load has completed and the last user was read--")
+                print("--inital code load has completed and the last user was read--")
+        })
+        // SETTING UP MASTER EVENT ARRAY
+        ref.child("Events").observe(.childAdded, with: { (snapshot) in
+            let dict = snapshot.value as! [String:Any]
+            let e = Event(dict: dict)
+            e.firebaseKey = snapshot.key
+            AppData.masterEvents.append(e)
+        })
+        
+        // called after .childAdded
+        ref.child("Events").observeSingleEvent(of: .value, with: { snapshot in
+                print("--inital event load has completed and the last user was read--")
         })
         
         
