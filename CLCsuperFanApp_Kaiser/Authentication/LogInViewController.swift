@@ -97,7 +97,10 @@ class LogInViewController: UIViewController {
         if isPasswordValid(cleanedPassword){
             
         }else{
-            return "Invalid email or password."
+            let alert = UIAlertController(title: "ERROR", message: "Invalid username or password.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "ok", style: .default , handler: nil)
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
         }
         
         return nil

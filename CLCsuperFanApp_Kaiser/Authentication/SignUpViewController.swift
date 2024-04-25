@@ -83,7 +83,10 @@ class SignUpViewController: UIViewController {
                     let db = Firestore.firestore()
                     db.collection("users").addDocument(data: ["firstName" : firstName, "lastName" : lastName, "uid" : result!.user.uid]) { error in
                         if error != nil{
-                            print("Error saving user")
+                            let alert = UIAlertController(title: "ERROR", message: "Error saving user", preferredStyle: .alert)
+                            let okAction = UIAlertAction(title: "ok", style: .default , handler: nil)
+                            alert.addAction(okAction)
+                            self.present(alert, animated: true, completion: nil)
                         }else{
                             //transition to the home screen
                             self.transitionToHome()
