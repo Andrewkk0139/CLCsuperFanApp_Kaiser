@@ -16,12 +16,15 @@ class AdminConsole: UIViewController {
     @IBOutlet weak var lifeOutlet: UITextField!
     @IBOutlet weak var valueOutlet: UITextField!
     @IBOutlet weak var successfullyOutlet: UILabel!
+    @IBOutlet weak var titleFieldOutlet: UITextField!
+    @IBOutlet weak var dateFieldOutlet: UITextField!
+    @IBOutlet weak var eventMadeOutlet: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
         // Do any additional setup after loading the view.
-        successfullyOutlet.isHidden = true
+        //successfullyOutlet.isHidden = true
         
     }
     
@@ -45,6 +48,9 @@ class AdminConsole: UIViewController {
         }
     }
     
-   
+    @IBAction func makeEventButtonAction(_ sender: Any) {
+        
+    }
+    
 
 }
