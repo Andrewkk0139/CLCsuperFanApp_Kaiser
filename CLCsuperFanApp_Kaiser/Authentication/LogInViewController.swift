@@ -8,6 +8,7 @@ import UIKit
 import FirebaseCore
 import FirebaseDatabase
 import FirebaseAuth
+import AVKit
 
 struct AppData {
     static var user: Student!
@@ -22,6 +23,8 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var emailTextFieldOutlet: UITextField!
     @IBOutlet weak var passwordTextFieldOutlet: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
+    var videoPlayer: AVPlayer?
+    var videoPlayerLayer: AVPlayerLayer?
     
     var ref: DatabaseReference!
     
@@ -65,6 +68,36 @@ class LogInViewController: UIViewController {
                 print("--inital load has completed and the last user was read--")
         })
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setUpVideo()
+    }
+    
+    func setUpVideo(){
+        
+        let bundelPath = Bundle.main.path(forResource: "image", ofType: "mp4")
+        
+        guard bundelPath != nil else{
+            return
+        }
+        
+        let url = URL(fileURLWithPath: bundelPath!)
+        //Create a video player item
+        let item = AVPlayerItem(url: url)
+        //create the player
+        videoPlayer = AVPlayer(playerItem: item)
+        //create the layer
+        videoPlayerLayer = AVPlayerLayer(player: videoPlayer!)
+        //adjust size of a frame
+        videoPlayerLayer?.frame = self.view.frame
+        
+        //CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: view.frame.size.height)
+        
+    
+        view.layer.insertSublayer(videoPlayerLayer!, at: 0)
+        videoPlayer?.playImmediately(atRate: 1)
         
     }
     

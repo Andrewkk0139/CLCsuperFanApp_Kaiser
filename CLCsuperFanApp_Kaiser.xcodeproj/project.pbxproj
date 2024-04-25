@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14095B722BD161DB00336E59 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14095B712BD161DB00336E59 /* SignUpViewController.swift */; };
+		145AA0EA2BDA9D4D0066A6DB /* image.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 145AA0E92BDA9D4D0066A6DB /* image.mp4 */; };
 		14A1AB262BD2B9F500B26820 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 14A1AB252BD2B9F500B26820 /* FirebaseAnalytics */; };
 		357C914D2BD6B44C00F053BA /* VCScoreName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357C914C2BD6B44C00F053BA /* VCScoreName.swift */; };
 		3B3E294E2B9B62AC00D326AF /* logInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3E294D2B9B62AC00D326AF /* logInVC.swift */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		14095B712BD161DB00336E59 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		145AA0E92BDA9D4D0066A6DB /* image.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = image.mp4; sourceTree = "<group>"; };
 		357C914C2BD6B44C00F053BA /* VCScoreName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCScoreName.swift; sourceTree = "<group>"; };
 		3B3E294D2B9B62AC00D326AF /* logInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logInVC.swift; sourceTree = "<group>"; };
 		3B3E294F2B9B62C900D326AF /* createVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createVC.swift; sourceTree = "<group>"; };
@@ -70,7 +72,6 @@
 		3B9E35112BA342E7008D4855 /* AccessCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCodeVC.swift; sourceTree = "<group>"; };
 		3B9E35152BA343E0008D4855 /* AccessCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCode.swift; sourceTree = "<group>"; };
 		3B9E35172BA345E4008D4855 /* AdminConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminConsole.swift; sourceTree = "<group>"; };
-		3BA827422B9F54390037B0DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3BCC30922B98C3B900E9A4FB /* CLCsuperFanApp_Kaiser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLCsuperFanApp_Kaiser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCC30952B98C3B900E9A4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BCC30972B98C3B900E9A4FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,9 +80,9 @@
 		3BCC309E2B98C3BA00E9A4FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BCC30A12B98C3BA00E9A4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BCC30A32B98C3BA00E9A4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BCC30A82B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CLCsuperFanApp_KaiserTests; path = ../../../../../../../../Documents/CLCsuperFanApp_Kaiser/CLCsuperFanApp_KaiserTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BCC30A82B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CLCsuperFanApp_KaiserTests; path = CLCsuperFanApp_KaiserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCC30AC2B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCsuperFanApp_KaiserTests.swift; sourceTree = "<group>"; };
-		3BCC30B22B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CLCsuperFanApp_KaiserUITests; path = ../../../../../../../../Documents/CLCsuperFanApp_Kaiser/CLCsuperFanApp_KaiserUITests; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BCC30B22B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CLCsuperFanApp_KaiserUITests; path = CLCsuperFanApp_KaiserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCC30B62B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCsuperFanApp_KaiserUITests.swift; sourceTree = "<group>"; };
 		3BCC30B82B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCsuperFanApp_KaiserUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		85FBBFB92BD35F4600E6A1C8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +123,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		145AA0E82BDA9D130066A6DB /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				145AA0E92BDA9D4D0066A6DB /* image.mp4 */,
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 		3BA2EB7E2BC9805900676F75 /* AccountVCs */ = {
@@ -183,6 +192,7 @@
 				3BCC309B2B98C3B900E9A4FB /* Main.storyboard */,
 				357C914C2BD6B44C00F053BA /* VCScoreName.swift */,
 				85FBBFBB2BD35F6600E6A1C8 /* Authentication */,
+				145AA0E82BDA9D130066A6DB /* Media */,
 				3BA2EB7F2BC9807300676F75 /* Classes */,
 				3BA2EB7E2BC9805900676F75 /* AccountVCs */,
 				3BCC30992B98C3B900E9A4FB /* ViewController.swift */,
@@ -339,6 +349,7 @@
 			files = (
 				3BCC30A22B98C3BA00E9A4FB /* LaunchScreen.storyboard in Resources */,
 				3B433AFD2BD7FA0500814150 /* GoogleService-Info.plist in Resources */,
+				145AA0EA2BDA9D4D0066A6DB /* image.mp4 in Resources */,
 				3BCC309F2B98C3BA00E9A4FB /* Assets.xcassets in Resources */,
 				3BCC309D2B98C3B900E9A4FB /* Main.storyboard in Resources */,
 			);
