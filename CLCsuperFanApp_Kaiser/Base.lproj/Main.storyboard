@@ -1058,9 +1058,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sw5-U5-W4a"/>
-        <segue reference="LNI-qR-H6N"/>
+        <segue reference="ASL-TD-Rf2"/>
+        <segue reference="Ktk-l8-e1q"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="clcTigers" width="505" height="494"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
