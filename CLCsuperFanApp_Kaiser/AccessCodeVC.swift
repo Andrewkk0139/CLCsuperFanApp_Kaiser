@@ -44,7 +44,7 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate {
         
         latitude = Double(locationManager.location!.coordinate.latitude)
         longitude = Double(locationManager.location!.coordinate.longitude)
-        var adminPassword = adminPasswordOutlet.text
+        var adminPassword = adminPasswordOutlet.text ?? ""
         
         if((42.231 ... 42.238).contains(latitude) && (-88.327 ... -88.320).contains(longitude) || adminPassword == "d155Admin"){
             codeRedOutlet.isHidden = true
