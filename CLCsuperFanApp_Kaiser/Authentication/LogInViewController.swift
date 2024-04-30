@@ -19,7 +19,7 @@ struct AppData {
 }
 
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextFieldOutlet: UITextField!
     @IBOutlet weak var passwordTextFieldOutlet: UITextField!
@@ -34,7 +34,8 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        emailTextFieldOutlet.delegate = self
+        passwordTextFieldOutlet.delegate = self
         // Do any additional setup after loading the view.
         ref = Database.database().reference()
         
@@ -141,7 +142,8 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func logInAction(_ sender: Any) {
-        
+        emailTextFieldOutlet.resignFirstResponder()
+        passwordTextFieldOutlet.resignFirstResponder()
         //validate text fields
         if validateFields() == nil{
             let email = emailTextFieldOutlet.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -193,5 +195,10 @@ class LogInViewController: UIViewController {
                 self.errorLabel.text = validateFields()
             }
         }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
     }
 
