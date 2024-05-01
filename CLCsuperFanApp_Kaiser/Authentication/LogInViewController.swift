@@ -102,7 +102,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let url = URL(fileURLWithPath: bundelPath!)
         //Create a video player item
         let item = AVPlayerItem(url: url)
+        //let queuePlayer = AVQueuePlayer(playerItem: item)
         //create the player
+        //let videoLooper = AVPlayerLooper(player: queuePlayer, templateItem: item)
         videoPlayer = AVPlayer(playerItem: item)
         //create the layer
         videoPlayerLayer = AVPlayerLayer(player: videoPlayer!)
@@ -112,6 +114,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
         view.layer.insertSublayer(videoPlayerLayer!, at: 0)
         videoPlayer?.playImmediately(atRate: 1)
+        
+        //queuePlayer.play()
     
         
     }
@@ -195,6 +199,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 self.errorLabel.text = validateFields()
             }
         }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
