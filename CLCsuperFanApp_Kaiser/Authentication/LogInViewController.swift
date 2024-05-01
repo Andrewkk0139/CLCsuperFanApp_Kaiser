@@ -26,6 +26,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var errorLabel: UILabel!
     var videoPlayer: AVPlayer?
     var videoPlayerLayer: AVPlayerLayer?
+    var videoLooper: AVPlayerLooper?
+    var queuePlayer: AVQueuePlayer?
     
     var ref: DatabaseReference!
     
@@ -91,7 +93,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     func setUpVideo(){
         
-        let bundelPath = Bundle.main.path(forResource: "image", ofType: "mp4")
+        let bundelPath = Bundle.main.path(forResource: "goFan", ofType: "mp4")
         
         guard bundelPath != nil else{
             return
@@ -107,11 +109,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         //adjust size of a frame
         videoPlayerLayer?.frame = self.view.frame
         videoPlayerLayer?.videoGravity = .resizeAspectFill
-        //CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: view.frame.size.height)
-        
     
         view.layer.insertSublayer(videoPlayerLayer!, at: 0)
         videoPlayer?.playImmediately(atRate: 1)
+    
         
     }
     
