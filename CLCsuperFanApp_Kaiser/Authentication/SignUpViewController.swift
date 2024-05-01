@@ -23,6 +23,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        firstNameTextField.delegate = self
         passwordTextField.delegate = self
         emailTextField.delegate = self
         lastNameTextField.delegate = self
@@ -54,7 +55,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             return nil
     }
     @IBAction func signUpTapped(_ sender: Any) {
-        
+        lastNameTextField.resignFirstResponder()
+        firstNameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
         //validate fields
         let error =  validateFields()
         

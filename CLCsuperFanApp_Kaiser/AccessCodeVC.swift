@@ -10,7 +10,7 @@ import FirebaseCore
 import FirebaseDatabase
 import MapKit
 
-class AccessCodeVC: UIViewController,CLLocationManagerDelegate {
+class AccessCodeVC: UIViewController,CLLocationManagerDelegate,UITextFieldDelegate {
     
     @IBOutlet weak var codeFieldOutlet: UITextField!
     @IBOutlet weak var codeRedOutlet: UILabel!
@@ -25,6 +25,8 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        codeFieldOutlet.delegate = self
+        adminPasswordOutlet.delegate = self
         ref = Database.database().reference()
         // Do any additional setup after loading the view.
         codeRedOutlet.isHidden = true
@@ -41,7 +43,8 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate {
     }
     
     @IBAction func redeemAction(_ sender: Any) {
-        
+        codeFieldOutlet.resignFirstResponder()
+        adminPasswordOutlet.resignFirstResponder()
         latitude = Double(locationManager.location!.coordinate.latitude)
         longitude = Double(locationManager.location!.coordinate.longitude)
         var adminPassword = adminPasswordOutlet.text ?? ""
@@ -131,5 +134,10 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         currentLocaiton = locations[0]
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
     // end of class
 }
