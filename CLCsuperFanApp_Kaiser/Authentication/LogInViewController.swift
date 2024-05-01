@@ -102,20 +102,25 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let url = URL(fileURLWithPath: bundelPath!)
         //Create a video player item
         let item = AVPlayerItem(url: url)
-        //let queuePlayer = AVQueuePlayer(playerItem: item)
-        //create the player
-        //let videoLooper = AVPlayerLooper(player: queuePlayer, templateItem: item)
-        videoPlayer = AVPlayer(playerItem: item)
-        //create the layer
-        videoPlayerLayer = AVPlayerLayer(player: videoPlayer!)
-        //adjust size of a frame
-        videoPlayerLayer?.frame = self.view.frame
-        videoPlayerLayer?.videoGravity = .resizeAspectFill
-    
-        view.layer.insertSublayer(videoPlayerLayer!, at: 0)
-        videoPlayer?.playImmediately(atRate: 1)
         
-        //queuePlayer.play()
+        let queuePlayer = AVQueuePlayer(playerItem: item)
+        let videoPlayerLayer = AVPlayerLayer(player: queuePlayer)
+        let videoLooper = AVPlayerLooper(player: queuePlayer, templateItem: item)
+        videoPlayerLayer.frame = self.view.frame
+        videoPlayerLayer.videoGravity = .resizeAspectFill
+        view.layer.insertSublayer(videoPlayerLayer, at: 0)
+        queuePlayer.playImmediately(atRate: 1)
+        
+//        //create the player
+//        videoPlayer = AVPlayer(playerItem: item)
+//        //create the layer
+//        videoPlayerLayer = AVPlayerLayer(player: videoPlayer!)
+//        //adjust size of a frame
+//        videoPlayerLayer?.frame = self.view.frame
+//        videoPlayerLayer?.videoGravity = .resizeAspectFill
+//    
+//        view.layer.insertSublayer(videoPlayerLayer!, at: 0)
+//        videoPlayer?.playImmediately(atRate: 1)
     
         
     }
