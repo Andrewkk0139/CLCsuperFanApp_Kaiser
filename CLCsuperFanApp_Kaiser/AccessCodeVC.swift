@@ -60,6 +60,7 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate {
                 print(AppData.masterCodes[i].code)
                 if AppData.masterCodes[i].code == tempCode {
                     validBool = true
+                    var checkCodeLife = AppData.masterCodes[i].life
                     // if code is valid
                     print("code is valid")
                     let firebaseCode = AppData.masterCodes[i]
@@ -67,7 +68,7 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate {
                         
                         
                         // code isn't used already by user
-                        if AppData.user.usedCodes[k] != tempCode{
+                        if AppData.user.usedCodes[k] != tempCode && checkCodeLife > 0 {
                             // checks to see if its went thru whole array
                             print("value of K:\(k), value of count: \(AppData.user.usedCodes.count - 1)")
                             if k == AppData.user.usedCodes.count - 1 && !foundUsed{
