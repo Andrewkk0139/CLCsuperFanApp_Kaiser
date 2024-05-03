@@ -64,7 +64,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxO-BX-zSG">
-                                        <rect key="frame" x="0.0" y="21" width="300.66666666666669" height="45.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="20.999999999999996" width="300.66666666666669" height="45.666666666666657"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Leaderboard">
                                             <fontDescription key="titleFontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="38"/>
@@ -640,7 +640,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6GR-Vv-Uei"/>
-                        <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.76862752440000004" green="0.34901961679999999" blue="0.13725490870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="2aj-dp-3OI"/>
                     <connections>
@@ -779,12 +779,12 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="appstore-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="vO3-X3-nj2">
-                                <rect key="frame" x="76" y="455" width="240" height="128"/>
+                                <rect key="frame" x="-149" y="336" width="690" height="311"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sz9-hm-idv"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.78039217000000005" green="0.35294118520000001" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="T3T-aM-ymm" secondAttribute="trailing" constant="20" id="6Dd-ct-pDw"/>
                             <constraint firstItem="T3T-aM-ymm" firstAttribute="top" secondItem="Sz9-hm-idv" secondAttribute="top" id="6hw-ud-3Du"/>
@@ -802,7 +802,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lP7-W1-hhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2308" y="787"/>
+            <point key="canvasLocation" x="2307.6335877862593" y="786.61971830985919"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="Z4U-Fc-3EF">
