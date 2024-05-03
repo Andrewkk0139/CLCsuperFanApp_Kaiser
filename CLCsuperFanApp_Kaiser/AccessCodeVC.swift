@@ -50,17 +50,19 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate,UITextFieldDelega
         var adminPassword = adminPasswordOutlet.text ?? ""
         
         if((42.231 ... 42.238).contains(latitude) && (-88.327 ... -88.320).contains(longitude) || adminPassword == "d155Admin"){
+            print("these r the codes used by user: ")
+            for i in 0..<AppData.user.usedCodes.count{
+                print(AppData.user.usedCodes[i])
+            }
             codeRedOutlet.isHidden = true
             codeInvalidOutlet.isHidden = true
             codeAlrRedeemedOutlet.isHidden = true
             let tempCode = codeFieldOutlet.text ?? "nil"
             var validBool = false
-            var alrRedBool = true
             var foundUsed = false
             for i in 0..<AppData.masterCodes.count {
                 // checks to see if the code is valid
-                print(tempCode)
-                print(AppData.masterCodes[i].code)
+               
                 if AppData.masterCodes[i].code == tempCode {
                     validBool = true
                     var checkCodeLife = AppData.masterCodes[i].life
@@ -73,9 +75,7 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate,UITextFieldDelega
                         // code isn't used already by user
                         if AppData.user.usedCodes[k] != tempCode && checkCodeLife > 0 {
                             // checks to see if its went thru whole array
-                            print("value of K:\(k), value of count: \(AppData.user.usedCodes.count - 1)")
                             if k == AppData.user.usedCodes.count - 1 && !foundUsed{
-                                alrRedBool = false
                                 print("Code hasn't been used already")
                                 print("*BEFORE REDEEMED* Username:\(AppData.user.username) Points: \(AppData.user.points)")
                                 AppData.user.points += firebaseCode.value
@@ -118,7 +118,7 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate,UITextFieldDelega
                 codeInvalidOutlet.isHidden = false
                 codeAlrRedeemedOutlet.isHidden = true
             }
-            if alrRedBool {
+            if foundUsed {
                 codeAlrRedeemedOutlet.isHidden = false
                 codeInvalidOutlet.isHidden = true
             }
