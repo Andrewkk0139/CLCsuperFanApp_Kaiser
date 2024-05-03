@@ -103,13 +103,13 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         //Create a video player item
         let item = AVPlayerItem(url: url)
         
-        let queuePlayer = AVQueuePlayer(playerItem: item)
-        let videoPlayerLayer = AVPlayerLayer(player: queuePlayer)
-        let videoLooper = AVPlayerLooper(player: queuePlayer, templateItem: item)
+        queuePlayer = AVQueuePlayer(playerItem: item)
+        let videoPlayerLayer = AVPlayerLayer(player: queuePlayer!)
+        videoLooper = AVPlayerLooper(player: queuePlayer!, templateItem: item)
         videoPlayerLayer.frame = self.view.frame
         videoPlayerLayer.videoGravity = .resizeAspectFill
         view.layer.insertSublayer(videoPlayerLayer, at: 0)
-        queuePlayer.playImmediately(atRate: 1)
+        queuePlayer!.playImmediately(atRate: 1)
         
 //        //create the player
 //        videoPlayer = AVPlayer(playerItem: item)
