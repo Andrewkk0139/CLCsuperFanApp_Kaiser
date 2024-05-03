@@ -84,6 +84,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 print("--inital event load has completed and the last user was read--")
         })
         
+        //listen for keyboard events
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         
     }
     
@@ -208,6 +212,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    @objc func keyboardWillChange(notification: Notification){
+        print("Keyboard will show: \(notification.name.rawValue)")
     }
 
     }
