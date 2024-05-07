@@ -147,7 +147,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         
         if textFieldBottomY > keyboardTopY{
             let textBoxY = convertedTextFieldFrame.origin.y
-            let newFrameY = (textBoxY - keyboardTopY/2)-1
+            let newFrameY = (textBoxY - keyboardTopY/2) * -1
             view.frame.origin.y = newFrameY
         }
     }
