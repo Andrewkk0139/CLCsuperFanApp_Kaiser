@@ -16,6 +16,7 @@ struct AppData {
     static var masterCodes: [AccessCode] = []
     static var masterEvents: [Event] = []
     static var count = 0
+    static weak var responder: UIResponder?
 }
 
 
@@ -84,10 +85,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 print("--inital event load has completed and the last user was read--")
         })
         
-        //listen for keyboard events
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        setUpKeyboard()
         
     }
     
@@ -127,6 +125,45 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
 //        videoPlayer?.playImmediately(atRate: 1)
     
         
+    }
+    
+    func setUpKeyboard(){
+        //listen for keyboard events
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(sender: NSNotification){
+        //view.frame.origin.y = view.frame.origin.y-200
+        guard let userInfo = sender.userInfo,
+              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
+              let currentTextField = LogInViewController.currentFirst() as? UITextField else{
+            return
+        }
+        
+        let keyboardTopY = keyboardFrame.cgRectValue.origin.y
+        let convertedTextFieldFrame = view.convert(currentTextField.frame, to: currentTextField.superview)
+        let textFieldBottomY = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
+        
+        if textFieldBottomY > keyboardTopY{
+            let textBoxY = convertedTextFieldFrame.origin.y
+            let newFrameY = (textBoxY - keyboardTopY/2)-1
+            view.frame.origin.y = newFrameY
+        }
+    }
+    
+    @objc func keyboardWillHide(sender: NSNotification){
+        view.frame.origin.y = 0
+    }
+    
+    static func currentFirst() -> UIResponder?{
+        AppData.responder = nil
+        UIApplication.shared.sendAction(#selector(LogInViewController._trap), to: nil, from: nil, for: nil)
+        return AppData.responder
+    }
+    
+    @objc private func _trap(){
+        AppData.responder = self
     }
     
     func isPasswordValid(_ password : String) -> Bool{
@@ -212,10 +249,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
-    }
-    
-    @objc func keyboardWillChange(notification: Notification){
-        print("Keyboard will show: \(notification.name.rawValue)")
     }
 
     }
