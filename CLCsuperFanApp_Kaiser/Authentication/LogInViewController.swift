@@ -16,9 +16,23 @@ struct AppData {
     static var masterCodes: [AccessCode] = []
     static var masterEvents: [Event] = []
     static var count = 0
-    static weak var responder: UIResponder?
 }
 
+extension UIResponder{
+    private struct Static{
+        static weak var responder: UIResponder?
+    }
+    
+    static func currentFirst() -> UIResponder?{
+        Static.responder = nil
+        UIApplication.shared.sendAction(#selector(UIResponder._trap), to: nil, from: nil, for: nil)
+        return Static.responder
+    }
+    
+    @objc private func _trap(){
+        Static.responder = self
+    }
+}
 
 class LogInViewController: UIViewController, UITextFieldDelegate {
     
@@ -137,7 +151,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         //view.frame.origin.y = view.frame.origin.y-200
         guard let userInfo = sender.userInfo,
               let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
-              let currentTextField = LogInViewController.currentFirst() as? UITextField else{
+              let currentTextField = UIResponder.currentFirst() as? UITextField else{
             return
         }
         
@@ -145,25 +159,14 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let convertedTextFieldFrame = view.convert(currentTextField.frame, to: currentTextField.superview)
         let textFieldBottomY = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
         
-        if textFieldBottomY > keyboardTopY{
-            let textBoxY = convertedTextFieldFrame.origin.y
-            let newFrameY = (textBoxY - keyboardTopY/2) * -1
+        if textFieldBottomY < keyboardTopY{
+            let newFrameY = keyboardTopY - view.frame.height
             view.frame.origin.y = newFrameY
         }
     }
     
     @objc func keyboardWillHide(sender: NSNotification){
         view.frame.origin.y = 0
-    }
-    
-    static func currentFirst() -> UIResponder?{
-        AppData.responder = nil
-        UIApplication.shared.sendAction(#selector(LogInViewController._trap), to: nil, from: nil, for: nil)
-        return AppData.responder
-    }
-    
-    @objc private func _trap(){
-        AppData.responder = self
     }
     
     func isPasswordValid(_ password : String) -> Bool{
