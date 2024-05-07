@@ -68,6 +68,10 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate,UITextFieldDelega
                     var checkCodeLife = AppData.masterCodes[i].life
                     // if code is valid
                     print("code is valid")
+                    print("THESE ARE THE USERS CODES")
+                    for i in 0..<AppData.user.usedCodes.count{
+                        print("\(i): \(AppData.user.usedCodes[i])")
+                    }
                     let firebaseCode = AppData.masterCodes[i]
                     for k in 0..<AppData.user.usedCodes.count {
                         
@@ -85,7 +89,7 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate,UITextFieldDelega
                                 ref.child("Users").child("\(AppData.user.firebaseKey)").child("points:").setValue(AppData.user.points)
                                 AppData.user.usedCodes.append(tempCode)
                                 // updating on FireBase
-                                ref.child("Users").child("\(AppData.user.firebaseKey)").child("usedCodes:").setValue(AppData.user.usedCodes)
+                                ref.child("Users").child("\(AppData.user.firebaseKey)").child("usedCodes").setValue(AppData.user.usedCodes)
                                 // updating leaderboard
                                 AppData.masterUsers.sort(by: {$0.points > $1.points})
                                 for i in 0..<AppData.masterUsers.count {
@@ -101,6 +105,7 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate,UITextFieldDelega
                                 
                             }
                         } else {
+                            print("THIS ISNT RUNNING")
                             foundUsed = true
                             //codeAlrRedeemedOutlet.isHidden = false
                             print("Code has been already redeemed")
@@ -108,13 +113,12 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate,UITextFieldDelega
                         }
                     }
                 } else {
-                    validBool = true
                     //codeInvalidOutlet.isHidden = false
                     print("Code is invalid")
                     //break
                 }
             }
-            if validBool {
+            if !validBool {
                 codeInvalidOutlet.isHidden = false
                 codeAlrRedeemedOutlet.isHidden = true
             }

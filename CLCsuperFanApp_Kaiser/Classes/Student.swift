@@ -77,7 +77,7 @@ import FirebaseDatabase
          } else {
              points = 0
          }
-         if let u = dict["usedCodes:"] as? [String]{
+         if let u = dict["usedCodes"] as? [String]{
              usedCodes = u
          }
          
