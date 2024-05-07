@@ -86,7 +86,7 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate,UITextFieldDelega
                                 codeRedOutlet.isHidden = false
                                 print("*AFTER REDEEMED* Username:\(AppData.user.username) Points: \(AppData.user.points)")
                                 // updating on FireBase
-                                ref.child("Users").child("\(AppData.user.firebaseKey)").child("points:").setValue(AppData.user.points)
+                                ref.child("Users").child("\(AppData.user.firebaseKey)").child("points").setValue(AppData.user.points)
                                 AppData.user.usedCodes.append(tempCode)
                                 // updating on FireBase
                                 ref.child("Users").child("\(AppData.user.firebaseKey)").child("usedCodes").setValue(AppData.user.usedCodes)

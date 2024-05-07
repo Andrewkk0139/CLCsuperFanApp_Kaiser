@@ -72,7 +72,7 @@ import FirebaseDatabase
          } else {
              uid = ""
          }
-         if let p = dict["points:"] as? Int{
+         if let p = dict["points"] as? Int{
              points = p
          } else {
              points = 0
