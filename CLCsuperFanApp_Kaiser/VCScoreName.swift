@@ -15,8 +15,8 @@ class VCScoreName: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameOutlet.text = "Name:\(AppData.masterUsers[AppData.count].username)"
-        scoreOutlet.text = "Score:\(AppData.masterUsers[AppData.count].points)"
+        nameOutlet.text = "Name: \(AppData.masterUsers[AppData.count].username)"
+        scoreOutlet.text = "Score: \(AppData.masterUsers[AppData.count].points)"
        
     }
     
