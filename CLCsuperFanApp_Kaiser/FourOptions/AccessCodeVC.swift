@@ -12,6 +12,8 @@ import MapKit
 
 class AccessCodeVC: UIViewController,CLLocationManagerDelegate,UITextFieldDelegate {
     
+    
+    var other : MainVC!
     @IBOutlet weak var codeFieldOutlet: UITextField!
     @IBOutlet weak var codeRedOutlet: UILabel!
     @IBOutlet weak var codeInvalidOutlet: UILabel!
@@ -40,6 +42,9 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate,UITextFieldDelega
         
         
         
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        other.pointsOutlet.text = "Points: \(AppData.user.points)"
     }
     
     @IBAction func redeemAction(_ sender: Any) {
