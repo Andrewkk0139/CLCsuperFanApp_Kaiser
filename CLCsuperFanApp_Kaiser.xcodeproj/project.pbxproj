@@ -38,7 +38,7 @@
 		3BCC30CD2B98C50300E9A4FB /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3BCC30CC2B98C50300E9A4FB /* FirebaseDatabaseSwift */; };
 		3BCC30CF2B98C50300E9A4FB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3BCC30CE2B98C50300E9A4FB /* FirebaseFirestore */; };
 		3BEEF3D82BDA9DA700579D09 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEF3D72BDA9DA700579D09 /* Event.swift */; };
-		850151EC2BEC4162003A6DA1 /* goFanVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 850151EB2BEC4162003A6DA1 /* goFanVideo.mp4 */; };
+		850151F02BEC430D003A6DA1 /* goFanVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 850151EF2BEC430D003A6DA1 /* goFanVideo.mp4 */; };
 		85FBBFBA2BD35F4600E6A1C8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FBBFB92BD35F4600E6A1C8 /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,7 +90,7 @@
 		3BCC30B62B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCsuperFanApp_KaiserUITests.swift; sourceTree = "<group>"; };
 		3BCC30B82B98C3BB00E9A4FB /* CLCsuperFanApp_KaiserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCsuperFanApp_KaiserUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3BEEF3D72BDA9DA700579D09 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		850151EB2BEC4162003A6DA1 /* goFanVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = goFanVideo.mp4; path = ../../../../../Downloads/goFanVideo.mp4; sourceTree = "<group>"; };
+		850151EF2BEC430D003A6DA1 /* goFanVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = goFanVideo.mp4; sourceTree = "<group>"; };
 		85FBBFB92BD35F4600E6A1C8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,7 +136,7 @@
 			children = (
 				145AA0E92BDA9D4D0066A6DB /* image.mp4 */,
 				14B115572BE285E8002F4E46 /* goFan.mp4 */,
-				850151EB2BEC4162003A6DA1 /* goFanVideo.mp4 */,
+				850151EF2BEC430D003A6DA1 /* goFanVideo.mp4 */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -356,8 +356,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				850151EC2BEC4162003A6DA1 /* goFanVideo.mp4 in Resources */,
 				3BCC30A22B98C3BA00E9A4FB /* LaunchScreen.storyboard in Resources */,
+				850151F02BEC430D003A6DA1 /* goFanVideo.mp4 in Resources */,
 				3B433AFD2BD7FA0500814150 /* GoogleService-Info.plist in Resources */,
 				145AA0EA2BDA9D4D0066A6DB /* image.mp4 in Resources */,
 				14B115582BE285E8002F4E46 /* goFan.mp4 in Resources */,
@@ -586,7 +586,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A67NH8S3S6;
+				DEVELOPMENT_TEAM = SZURQ69PCN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CLCsuperFanApp_Kaiser/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "\"Can I use yo camera?\"";
@@ -602,7 +602,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "clc.CLCsuperFanApp-Kaiser-Kenefick3";
+				PRODUCT_BUNDLE_IDENTIFIER = "clc.CLCsuperFanApp-Kaiser-Kenefick-Stajila";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -617,7 +617,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A67NH8S3S6;
+				DEVELOPMENT_TEAM = SZURQ69PCN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CLCsuperFanApp_Kaiser/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "\"Can I use yo camera?\"";
@@ -633,7 +633,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "clc.CLCsuperFanApp-Kaiser-Kenefick3";
+				PRODUCT_BUNDLE_IDENTIFIER = "clc.CLCsuperFanApp-Kaiser-Kenefick-Stajila";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
