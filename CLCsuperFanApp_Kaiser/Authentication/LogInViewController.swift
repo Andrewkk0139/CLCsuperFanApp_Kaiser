@@ -111,7 +111,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     func setUpVideo(){
         
-        let bundelPath = Bundle.main.path(forResource: "goFan", ofType: "mp4")
+        let bundelPath = Bundle.main.path(forResource: "goFanVideo", ofType: "mp4")
         
         guard bundelPath != nil else{
             return
