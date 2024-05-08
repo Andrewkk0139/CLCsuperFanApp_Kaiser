@@ -31,8 +31,8 @@ class MainVC: UIViewController {
         }
         
     }
-    
-    @IBAction func upcomingAction(_ sender: Any) { 
+   
+    @IBAction func upcomingAction(_ sender: Any) {
         performSegue(withIdentifier: "toUpcomingEvents", sender: self)
     }
     @IBAction func leaderboardAction(_ sender: Any) { 
@@ -55,6 +55,15 @@ class MainVC: UIViewController {
         self.view.window?.rootViewController = introViewController
         self.view.window?.makeKeyAndVisible()
         
+    }
+    
+   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCode"
+        {
+            var place = segue.destination as! AccessCodeVC
+            place.other = self
+        }
     }
     
 }
