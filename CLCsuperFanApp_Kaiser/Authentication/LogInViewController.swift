@@ -46,6 +46,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     var ref: DatabaseReference!
     
+    var keyboardShown = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -159,13 +161,15 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let convertedTextFieldFrame = view.convert(currentTextField.frame, to: currentTextField.superview)
         let textFieldBottomY = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
         
-        if textFieldBottomY < keyboardTopY{
+        if textFieldBottomY < keyboardTopY && keyboardShown == false{
+            keyboardShown = true
             let newFrameY = keyboardTopY - view.frame.height
             view.frame.origin.y = newFrameY
         }
     }
     
     @objc func keyboardWillHide(sender: NSNotification){
+        keyboardShown = false
         view.frame.origin.y = 0
     }
     
@@ -251,6 +255,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        logInAction(self)
         return true
     }
 
