@@ -53,6 +53,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         emailTextFieldOutlet.delegate = self
         passwordTextFieldOutlet.delegate = self
+        emailTextFieldOutlet.autocorrectionType = .no
+        passwordTextFieldOutlet.autocorrectionType = .no
         // Do any additional setup after loading the view.
         ref = Database.database().reference()
         

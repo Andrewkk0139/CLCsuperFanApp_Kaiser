@@ -32,5 +32,16 @@ class UpcomingVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.detailTextLabel!.text = "\(AppData.masterEvents[indexPath.row].date)"
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        let blah = indexPath.row
+        print(blah)
+        AppData.count = blah
+      
+            //performSegue(withIdentifier: "toOne", sender: self)
+        performSegue(withIdentifier: "toinfo", sender: self)
+        
+    }
+
 
 }

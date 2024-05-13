@@ -28,8 +28,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         emailTextField.delegate = self
         lastNameTextField.delegate = self
         ref = Database.database().reference()
-        
+        firstNameTextField.autocorrectionType = .no
+        lastNameTextField.autocorrectionType = .no
+        passwordTextField.autocorrectionType = .no
+       emailTextField.autocorrectionType = .no
     }
+    
     
     func isPasswordValid(_ password : String) -> Bool{
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
@@ -61,48 +65,55 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.resignFirstResponder()
         //validate fields
         let error =  validateFields()
-        
-        if error == nil{
-            
-            let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            
-            Auth.auth().createUser(withEmail: email, password: password) { result, err in
-                //checks for errors
-                if let err = err{
-                    //There was an error creating the user
-                    self.errorLabel.textColor = UIColor.red
-                    self.errorLabel.text = "\(err.localizedDescription)"
-                    print(err)
-                }else{
-                    //User was added successfully
-                    //create user
-                    let student = Student(firstName: firstName, lastName: lastName, email: email, uid: result!.user.uid, points: 0)
-                    
-                    student.saveToFirebase()
-                    AppData.user = student
-                    
-                    
-                    let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["firstName" : firstName, "lastName" : lastName, "uid" : result!.user.uid]) { error in
-                        if error != nil{
-                            let alert = UIAlertController(title: "ERROR", message: "Error saving user", preferredStyle: .alert)
-                            let okAction = UIAlertAction(title: "ok", style: .default , handler: nil)
-                            alert.addAction(okAction)
-                            self.present(alert, animated: true, completion: nil)
-                        }else{
-                            //transition to the home screen
-                            self.transitionToHome()
+        if (lastNameTextField.text != nil || firstNameTextField.text != nil || emailTextField.text != nil || passwordTextField.text != nil){
+            if error == nil{
+                
+                let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+                let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+                let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+                let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+                
+                
+                Auth.auth().createUser(withEmail: email, password: password) { result, err in
+                    //checks for errors
+                    if let err = err{
+                        //There was an error creating the user
+                        self.errorLabel.textColor = UIColor.red
+                        self.errorLabel.text = "\(err.localizedDescription)"
+                        print(err)
+                    }else{
+                        //User was added successfully
+                        //create user
+                        let student = Student(firstName: firstName, lastName: lastName, email: email, uid: result!.user.uid, points: 0)
+                        
+                        student.saveToFirebase()
+                        AppData.user = student
+                        
+                        
+                        let db = Firestore.firestore()
+                        db.collection("users").addDocument(data: ["firstName" : firstName, "lastName" : lastName, "uid" : result!.user.uid]) { error in
+                            if error != nil{
+                                let alert = UIAlertController(title: "ERROR", message: "Error saving user", preferredStyle: .alert)
+                                let okAction = UIAlertAction(title: "ok", style: .default , handler: nil)
+                                alert.addAction(okAction)
+                                self.present(alert, animated: true, completion: nil)
+                            }else{
+                                //transition to the home screen
+                                self.transitionToHome()
+                            }
                         }
                     }
                 }
+            }else{
+                self.errorLabel.textColor = UIColor.white
+                self.errorLabel.text = "\(error!)"
             }
-        }else{
-            self.errorLabel.textColor = UIColor.red
-            self.errorLabel.text = "\(error!)"
+        }
+        else{
+            let alert = UIAlertController(title: "ERROR", message: "Please fill in all text fields.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "ok", style: .default , handler: nil)
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
         }
         
        

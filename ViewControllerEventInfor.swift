@@ -9,9 +9,12 @@ import UIKit
 
 class ViewControllerEventInfor: UIViewController {
 
+    @IBOutlet weak var LocationOutlet: UILabel!
+    @IBOutlet weak var pointsOutelt: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        pointsOutelt.text = "Points: \((AppData.masterUsers[AppData.count].points))"
         // Do any additional setup after loading the view.
     }
     

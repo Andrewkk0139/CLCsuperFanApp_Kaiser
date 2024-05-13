@@ -29,6 +29,8 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate,UITextFieldDelega
         super.viewDidLoad()
         codeFieldOutlet.delegate = self
         adminPasswordOutlet.delegate = self
+        codeFieldOutlet.autocorrectionType = .no
+        adminPasswordOutlet.autocorrectionType = .no
         ref = Database.database().reference()
         // Do any additional setup after loading the view.
         codeRedOutlet.isHidden = true
