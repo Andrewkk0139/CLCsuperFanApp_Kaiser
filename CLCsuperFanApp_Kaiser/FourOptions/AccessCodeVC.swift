@@ -170,7 +170,7 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate,UITextFieldDelega
         let convertedTextFieldFrame = view.convert(currentTextField.frame, to: currentTextField.superview)
         let textFieldBottomY = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
         
-        if textFieldBottomY < keyboardTopY && keyboardShown == false{
+        if textFieldBottomY > keyboardTopY && keyboardShown == false{
             keyboardShown = true
             let newFrameY = keyboardTopY - view.frame.height
             view.frame.origin.y = newFrameY
