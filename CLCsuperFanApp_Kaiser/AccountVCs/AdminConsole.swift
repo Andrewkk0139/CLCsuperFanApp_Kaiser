@@ -19,6 +19,7 @@ class AdminConsole: UIViewController {
     @IBOutlet weak var titleFieldOutlet: UITextField!
     @IBOutlet weak var dateFieldOutlet: UITextField!
     @IBOutlet weak var eventMadeOutlet: UILabel!
+    var keyboardShown = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class AdminConsole: UIViewController {
         // Do any additional setup after loading the view.
         //successfullyOutlet.isHidden = true
         eventMadeOutlet.isHidden = true
+        setUpKeyboard()
     }
     
     @IBAction func createCodeAction(_ sender: Any) {
@@ -69,5 +71,40 @@ class AdminConsole: UIViewController {
 
     }
     
+    func setUpKeyboard(){
+        //listen for keyboard events
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(sender: NSNotification){
+        //view.frame.origin.y = view.frame.origin.y-200
+        guard let userInfo = sender.userInfo,
+              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
+              let currentTextField = UIResponder.currentFirst() as? UITextField else{
+            return
+        }
+        
+        let keyboardTopY = keyboardFrame.cgRectValue.origin.y
+        let convertedTextFieldFrame = view.convert(currentTextField.frame, to: currentTextField.superview)
+        let textFieldBottomY = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
+        
+        if textFieldBottomY > keyboardTopY && keyboardShown == false{
+            keyboardShown = true
+            let newFrameY = keyboardTopY - view.frame.height
+            view.frame.origin.y = newFrameY
+        }
+    }
+    
+    @objc func keyboardWillHide(sender: NSNotification){
+        keyboardShown = false
+        view.frame.origin.y = 0
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.resignFirstResponder()
+        return true
+    }
+
 
 }

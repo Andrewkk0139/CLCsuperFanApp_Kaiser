@@ -172,7 +172,7 @@ class AccessCodeVC: UIViewController,CLLocationManagerDelegate,UITextFieldDelega
         
         if textFieldBottomY > keyboardTopY && keyboardShown == false{
             keyboardShown = true
-            let newFrameY = keyboardTopY - view.frame.height
+            let newFrameY = keyboardTopY - view.frame.height - 35
             view.frame.origin.y = newFrameY
         }
     }
