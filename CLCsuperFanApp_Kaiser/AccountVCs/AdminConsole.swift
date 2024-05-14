@@ -101,10 +101,5 @@ class AdminConsole: UIViewController {
         view.frame.origin.y = 0
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.resignFirstResponder()
-        return true
-    }
-
 
 }
