@@ -9,7 +9,7 @@ import UIKit
 import FirebaseCore
 import FirebaseDatabase
 
-class AdminConsole: UIViewController {
+class AdminConsole: UIViewController,UITextFieldDelegate{
     
     var ref: DatabaseReference!
     @IBOutlet weak var codeOutlet: UITextField!
@@ -26,9 +26,17 @@ class AdminConsole: UIViewController {
         // Do any additional setup after loading the view.
         //successfullyOutlet.isHidden = true
         eventMadeOutlet.isHidden = true
+        codeOutlet.delegate = self
+        lifeOutlet.delegate = self
+        valueOutlet.delegate = self
+        titleFieldOutlet.delegate = self
+        dateFieldOutlet.delegate = self
     }
     
     @IBAction func createCodeAction(_ sender: Any) {
+        codeOutlet.resignFirstResponder()
+        lifeOutlet.resignFirstResponder()
+        valueOutlet.resignFirstResponder()
         var check = AppData.masterCodes.count
         var newCode = AccessCode(code: codeOutlet.text!, life: Int(lifeOutlet.text!) ?? 5, value: Int(valueOutlet.text!) ?? 5)
         for i in 0..<AppData.masterCodes.count {
@@ -49,6 +57,8 @@ class AdminConsole: UIViewController {
     }
     
     @IBAction func makeEventButtonAction(_ sender: Any) {
+        titleFieldOutlet.resignFirstResponder()
+        dateFieldOutlet.resignFirstResponder()
         var check = AppData.masterEvents.count
         var newEvent = Event(title: titleFieldOutlet.text!, date: dateFieldOutlet.text!)
         for i in 0..<AppData.masterEvents.count{
@@ -68,6 +78,9 @@ class AdminConsole: UIViewController {
         
 
     }
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
 }
