@@ -15,6 +15,7 @@ class ViewControllerEventInfor: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         pointsOutelt.text = "Points: \((AppData.masterUsers[AppData.count].points))"
+     
         // Do any additional setup after loading the view.
     }
     

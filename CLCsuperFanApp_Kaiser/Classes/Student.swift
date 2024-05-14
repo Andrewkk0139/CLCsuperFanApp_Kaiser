@@ -20,7 +20,7 @@ import FirebaseDatabase
     var firebaseKey = ""
     var globalRank = 0
     var usedCodes: [String] = []
-
+   
      
     var ref = Database.database().reference()
 
@@ -32,10 +32,12 @@ import FirebaseDatabase
         self.lastName = lastName
         self.email = email
         self.uid = uid
+       
 //        self.password = password
         self.points = points
         firebaseKey = ref.child("Users").childByAutoId().key ?? "0"
         usedCodes.append("nil")
+         
          
     }
     
